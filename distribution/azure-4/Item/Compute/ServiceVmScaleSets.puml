@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Compute/ServiceVmScaleSets
+
+sprite $ServiceVmScaleSetsXs [10x10/16z] HSQ53G0W402nmst_VGcyDLR2UOeiLTl-PAcymTxz-HizZS4pUvwJPps83XS
+
+sprite $ServiceVmScaleSetsSm [12x12/16z] JOh50GGn4CCyJFtNUx2GH2-3S38N_MIbdSMxs-pAVKE0_6VHAmFMwHTtZY2EmFLai6RUkSgpwihi7fT_Omfy0G
+
+sprite $ServiceVmScaleSetsMd [16x16/16z] NSa55W0X201HfM7lVz-rQyp_I6_VxB3SneotHIA2cQ4xPhpiaAsxn14AnATbDkUg0bBkQZ0hFm0SBfbPSRcdtPtgDUoZubbMIcT8rJy
+
+sprite $ServiceVmScaleSetsLg [20x20/16z] {
+RSY53O0030NH_dhB_lFY3XUvvD5VaMSuh8SpkLj0-cq2qO-PUtUxcUbXrLU7zP9h7LQx6I27BTbYebfp04xpgwV9qoB20SGS7MMcCslCVnYOysurbvhBBZkx
+ZESiR1dTKrTw1H71_0a
+}
+
+!procedure ServiceVmScaleSets($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Compute/ServiceVmScaleSets', $name, $tech)
+!endprocedure
+
+!procedure ServiceVmScaleSetsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceVmScaleSetsLg>', 'Compute', $funcName, $content)
+!endprocedure
+
+!procedure ServiceVmScaleSetsGroup($id, $name='Service Vm Scale Sets', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceVmScaleSetsLg>', $name, $tech)
+!endprocedure

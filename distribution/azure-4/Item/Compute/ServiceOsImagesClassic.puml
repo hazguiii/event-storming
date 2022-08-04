@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Compute/ServiceOsImagesClassic
+
+sprite $ServiceOsImagesClassicXs [10x10/16z] FOY70G0W2CCg6_x_rwrXXU9ZxM4qNrcPJnDP6dCiQnajusa9mueDwkuHFbb15GwIcVCC
+
+sprite $ServiceOsImagesClassicSm [12x12/16z] JSV50GGn5CDGVNBYzD_lCimxILneVYHcU8XHB1ww6zwjQKF4VhPylesyG64a7a9AN_1qJlDbRzxQViyT
+
+sprite $ServiceOsImagesClassicMd [16x16/16z] NSm50W8n30NHQSd6xdzWVeepgw_6N_uVQoscyoFxyHuR7hXqCxEbpzZqlUI2XIV8xjaoH78TLybxx839pFuiVE_t-UEVCkitJjRTVENTFnjBxRSY7w7k
+
+sprite $ServiceOsImagesClassicLg [20x20/16z] {
+TSu5WiKW34NH5q_O_u8ds7m_zTiMm1TgdvpfdViy74VV2henOnBTMU6n6slZtU8qq-MsCv1fZVrxv6rUuxJC_lUqgltlRJIROBSY5apiTorLXDSrSpVNDrOM
+MxRO7CTek7uthYOlIMinF7XScFu
+}
+
+!procedure ServiceOsImagesClassic($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Compute/ServiceOsImagesClassic', $name, $tech)
+!endprocedure
+
+!procedure ServiceOsImagesClassicCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceOsImagesClassicLg>', 'Compute', $funcName, $content)
+!endprocedure
+
+!procedure ServiceOsImagesClassicGroup($id, $name='Service Os Images Classic', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceOsImagesClassicLg>', $name, $tech)
+!endprocedure

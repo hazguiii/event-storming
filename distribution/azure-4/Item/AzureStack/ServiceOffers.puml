@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/AzureStack/ServiceOffers
+
+sprite $ServiceOffersXs [10x10/16z] LOg34G0140DpLl_rlhc347_CVUWoXTgCUspaPJ8JPx5NmLiXYOsaFEw7lGokPWK
+
+sprite $ServiceOffersSm [12x12/16z] PSb90e1020F1MTEW__-lcULcdufGVbK93fkfke-k0k_3vOG84u5bDzXKbFlUz2viqtMFcSO-CinRk_m
+
+sprite $ServiceOffersMd [16x16/16z] TSm74WCW20LH-txY_UyRnfgwKnyeuL_DuvtTB5wY5ZgReK7NGuiL2Y0Dad6xn7oC9whazvX9QfDXgc1fV9xKu1n4tpRdh4bKcpo3oLMRsnk7Jm
+
+sprite $ServiceOffersLg [20x20/16z] {
+VSg73S1024DHhe2Dil--YK_fxQF6a-s_7ggUoIKvPRcjo4BMomeP5Xa7MGCmBUSsqcQBVLy1Q1KWwTSLbNOEjvMYaT0AnmWno16s2jUL_hgHLge0Y2xgJDWQ
+o1AanQ0rBZbITC42qGLphAwjTCtjQ0O
+}
+
+!procedure ServiceOffers($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/AzureStack/ServiceOffers', $name, $tech)
+!endprocedure
+
+!procedure ServiceOffersCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceOffersLg>', 'AzureStack', $funcName, $content)
+!endprocedure
+
+!procedure ServiceOffersGroup($id, $name='Service Offers', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceOffersLg>', $name, $tech)
+!endprocedure

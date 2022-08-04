@@ -1,0 +1,27 @@
+' definition of the Item azure-4/Item/Blockchain/ServiceAzureBlockchainService
+
+sprite $ServiceAzureBlockchainServiceXs [10x10/16z] BKg54S0W44iBUTr_N-vTOgWws28vG4YDGSBq1X2EHE3MFQny7H56eAw8f46oQSKb_04
+
+sprite $ServiceAzureBlockchainServiceSm [12x12/16z] DSm54W0n20D0fCaDwV__UzJG7OljIdlb0FowYU-QXFH8JCPYU10ABe_iDOFlZ7wn7bT6sNf5KhDTb9QBOzkSofL0-Gy
+
+sprite $ServiceAzureBlockchainServiceMd [16x16/16z] {
+HOq15aGH30D1WkpzxxlDhqV0J44vwJ5UAe3s59dhj4qz9o5Txv_FURGXznVJ6QNmKKP-0Vyz39uw8lK2WImSeDUjy0H69FkQ0UcRev8_UxDhTNGkW_-Mdp_m
+1m
+}
+
+sprite $ServiceAzureBlockchainServiceLg [20x20/16z] {
+NSy55i0W30FG8WrhkFzv9-ay4_e-RdUQ_LFTlNx9Cs_2QSlRX8FysAx1jnKP9-AcYjC2_PvPJKOQxc7wUUo36avpNK7JyeYb-nwfjQEiQXH91jxLqCoH4j0L
+oCDK1uaZv9JnA2-RM3HkoZmjS6IawQva7bLbwB0OTgOXgja6
+}
+
+!procedure ServiceAzureBlockchainService($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Blockchain/ServiceAzureBlockchainService', $name, $tech)
+!endprocedure
+
+!procedure ServiceAzureBlockchainServiceCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceAzureBlockchainServiceLg>', 'Blockchain', $funcName, $content)
+!endprocedure
+
+!procedure ServiceAzureBlockchainServiceGroup($id, $name='Service Azure Blockchain Service', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceAzureBlockchainServiceLg>', $name, $tech)
+!endprocedure

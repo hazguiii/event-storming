@@ -1,0 +1,245 @@
+@startuml test
+' configures the library
+!global $LIB_BASE_LOCATION="https://raw.githubusercontent.com/tmorin/plantuml-libs/master/distribution"
+
+' loads the library
+!include $LIB_BASE_LOCATION/bootstrap.puml
+
+
+' loads the package bootstrap
+include('eventstorming/bootstrap')
+
+left to right direction
+
+include('eventstorming/Element/System')
+include('eventstorming/Element/Command')
+include('eventstorming/Element/Aggregate')
+include('eventstorming/Element/DomainEvent')
+include('eventstorming/Element/ReadModel')
+include('eventstorming/Element/UserInterface')
+include('eventstorming/Element/Policy')
+include('eventstorming/Element/Person')
+/'External Systems'/
+System('SystemePaiementFrancais','Systeme de paiement français')
+/'Actors'/
+Person('Insured_t0')
+Person('Insured_t1')
+Person('Insured_t2')
+Person('Broker_t0')
+Person('Agent_t0')
+Person('Agent_t1')
+Person('Broker_t1')
+Person('Agent_t2')
+Person('Agent_t3')
+Person('Agent_t4')
+Person('Agent_t5')
+Person('Agent_t6')
+Person('Agent_t7')
+
+/'events'/
+
+DomainEvent('ConstatDeclare', 'Constat declaré')
+DomainEvent('ConstatEnvoye', 'Constat envoyé')
+DomainEvent('ExistenceVoitureVerifie', 'Existence de la voiture verifiée')
+DomainEvent('DossierOuvertDansLeSysteme', 'Dossier ouvert dans le systeme')
+DomainEvent('VoitureAjoutee', 'Voiture Ajoutée')
+DomainEvent('PoliceSelectionnee', 'Police selectionnée')
+DomainEvent('SinistreCree', 'Sinistre créé')
+DomainEvent('GarentiesAjoutees', 'Garenties ajoutées')
+DomainEvent('IntervenantsAjoutes', 'Intervenants ajoutés')
+DomainEvent('ProvisionsEstimesAjoutes', 'Provisions estimés ajoutés')
+DomainEvent('PrevisionsAjoutes', 'Previsions ajoutés')
+DomainEvent('BordereauEnvoye', 'Bordereau envoyé')
+DomainEvent('DocumentsVerifies', 'Documents verifiés')
+DomainEvent('CourtierPaye', 'Courtier Payé')
+DomainEvent('RequiredClaimDocumentUpdated', 'Required Claim Document Updated')
+DomainEvent('RequiredClaimDocumentCreated', 'Required Claim Document Created')
+DomainEvent('ClaimUpdated', 'Claim Updated')
+DomainEvent('ClaimNoteCreated', 'Claim Note Created')
+DomainEvent('WarrantyClaimOpened', 'Warranty Claim Opened')
+DomainEvent('WarrantyClaimClosed', 'Warranty Claim Closed')
+DomainEvent('WarrantyClaimReopened', 'Warranty Claim Reopened')
+DomainEvent('ClaimClosed', 'Claim Closed')
+DomainEvent('ClaimReopened', 'Claim Reopened')
+
+/'Commandes'/
+
+
+Command('DeclarerConstat', 'Declarer un constat')
+Command('EnvoyerConstat', 'Envoyer le constat')
+Command('VerifierExistenceDeVoiture', 'Verifier existence de la voiture')
+Command('OuvrirDossier', 'Ouvrir le dossier')
+Command('AjouterVoiture', 'Ajouter la voiture')
+Command('SelectionnerPolice', 'Selectionner la police')
+Command('CreerSinistre', 'Creer un sinistre')
+Command('AjouterGarenties', 'Ajouter des garenties')
+Command('AjouterIntervenants', 'Ajouter les intervenants')
+Command('AjouterProvisionsEstimes', 'Ajouter les provisions estimés')
+Command('AjouterPrevisions', 'Ajouter les previsions')
+Command('EnvoyerBordereau', 'Envoyer le bordereau')
+Command('VerifierDocuments', 'Verifier les documents')
+Command('PayerCourtier', 'Payer le courtier')
+Command('UpdateRequiredClaimDocument', 'Update Required Claim Document')
+Command('CreateRequiredClaimDocument', 'Create Required Claim Document')
+Command('UpdateClaim', 'Update Claim')
+Command('CreateClaimNote', 'Create Claim Note')
+Command('OpenWarrantyClaim', 'Open Warranty Claim')
+Command('CloseWarrantyClaim', 'Close Warranty Claim')
+Command('ReopenWarrantyClaim', 'Reopen Warranty Claim')
+Command('CloseClaim', 'Close Claim')
+Command('ReopenClaim', 'Reopen Claim')
+
+/'Aggregate'/
+
+Aggregate('Aggregate_DeclarerConstat')
+Aggregate('Aggregate_EnvoyerConstat')
+Aggregate('Aggregate_VerifierExistenceDeVoiture')
+Aggregate('Aggregate_OuvrirDossier')
+Aggregate('Aggregate_AjouterVoiture')
+Aggregate('Aggregate_SelectionnerPolice')
+Aggregate('Aggregate_CreerSinistre')
+Aggregate('Aggregate_AjouterGarenties')
+Aggregate('Aggregate_AjouterIntervenants')
+Aggregate('Aggregate_AjouterProvisionsEstimes')
+Aggregate('Aggregate_AjouterPrevisions')
+Aggregate('Aggregate_EnvoyerBordereau')
+Aggregate('Aggregate_VerifierDocuments')
+Aggregate('Claim_t1')
+Aggregate('Claim_t2')
+
+/'Policies'/
+/'Read Model'/
+ReadModel('DetailsConstatt0', 'Details du constat à t0')
+ReadModel('DetailsConstatt1', 'Details du constat à t1')
+ReadModel('DetailsBordereau', 'Details du Bordereau')
+ReadModel('DetailsSinistre_t0', 'Details du sinistre à t0')
+ReadModel('DetailsSinistre_t1', 'Details du sinistre à t1')
+ReadModel('DetailsSinistre_t2', 'Details du sinistre à t2')
+ReadModel('PlatformeVEOS_t0', 'La Platforme Veos à t0')
+ReadModel('PlatformeVEOS_t1', 'La Platforme Veos à t1')
+ReadModel('PlatformeVEOS_t2', 'La Platforme Veos à t2')
+ReadModel('ClaimDetails', 'Details de sinistre à t3')
+ReadModel('ClaimNotes', 'Claim Notes')
+ReadModel('ClaimRequiredDocuments', 'Claim Required Documents')
+ReadModel('ClaimWarranties', 'Claim Warranties')
+
+
+
+/'Relations'/
+/' t = 0'/
+Insured_t0 --> DeclarerConstat : invokes
+DeclarerConstat --> Aggregate_DeclarerConstat : invoked on
+Aggregate_DeclarerConstat --> ConstatDeclare : generates
+ConstatDeclare --> DetailsConstatt0 : projected on
+DetailsConstatt0 -[norank]-> Broker_t0 : used by
+
+Broker_t0 --> EnvoyerConstat : invokes
+EnvoyerConstat--> Aggregate_EnvoyerConstat : invoked on
+Aggregate_EnvoyerConstat--> ConstatEnvoye : generates
+ConstatEnvoye --> DetailsConstatt1 : projected on
+DetailsConstatt1 -[norank]-> Agent_t0 : used by 
+
+Agent_t0 --> VerifierExistenceDeVoiture : invokes
+VerifierExistenceDeVoiture--> Aggregate_VerifierExistenceDeVoiture : invoked on
+Aggregate_VerifierExistenceDeVoiture--> ExistenceVoitureVerifie : Existe
+Aggregate_VerifierExistenceDeVoiture --> AjouterVoiture : N'existe pas
+AjouterVoiture --> Aggregate_AjouterVoiture : used by
+Aggregate_AjouterVoiture --> VoitureAjoutee
+VoitureAjoutee --> ExistenceVoitureVerifie
+ExistenceVoitureVerifie --> PlatformeVEOS_t0
+PlatformeVEOS_t0 -[norank]-> Agent_t1
+
+Agent_t1 --> OuvrirDossier
+OuvrirDossier --> Aggregate_OuvrirDossier
+Aggregate_OuvrirDossier --> DossierOuvertDansLeSysteme
+DossierOuvertDansLeSysteme --> PlatformeVEOS_t1
+PlatformeVEOS_t1 -[norank]-> Agent_t2
+
+Agent_t2 --> SelectionnerPolice
+SelectionnerPolice --> Aggregate_SelectionnerPolice
+Aggregate_SelectionnerPolice --> PoliceSelectionnee
+PoliceSelectionnee --> PlatformeVEOS_t2 
+PlatformeVEOS_t2 -[norank]-> Agent_t3
+
+Agent_t3 --> CreerSinistre
+CreerSinistre --> Aggregate_CreerSinistre
+Aggregate_CreerSinistre --> SinistreCree
+SinistreCree --> DetailsSinistre_t0
+DetailsSinistre_t0 -[norank]-> Agent_t4
+
+Agent_t4 --> AjouterGarenties
+Agent_t4 --> AjouterIntervenants
+Agent_t4 --> AjouterProvisionsEstimes
+Agent_t4 --> AjouterPrevisions
+AjouterGarenties --> Aggregate_AjouterGarenties
+Aggregate_AjouterGarenties --> GarentiesAjoutees
+AjouterIntervenants --> Aggregate_AjouterIntervenants
+Aggregate_AjouterIntervenants --> IntervenantsAjoutes
+AjouterProvisionsEstimes -->Aggregate_AjouterProvisionsEstimes
+Aggregate_AjouterProvisionsEstimes --> ProvisionsEstimesAjoutes
+AjouterPrevisions --> Aggregate_AjouterPrevisions
+Aggregate_AjouterPrevisions --> PrevisionsAjoutes
+GarentiesAjoutees --> DetailsSinistre_t1
+IntervenantsAjoutes --> DetailsSinistre_t1
+ProvisionsEstimesAjoutes --> DetailsSinistre_t1
+PrevisionsAjoutes --> DetailsSinistre_t1
+
+Broker_t1 -->EnvoyerBordereau
+EnvoyerBordereau --> Aggregate_EnvoyerBordereau
+Aggregate_EnvoyerBordereau --> BordereauEnvoye
+BordereauEnvoye --> DetailsBordereau
+DetailsBordereau --> Agent_t5
+Agent_t5 --> PayerCourtier
+PayerCourtier --> SystemePaiementFrancais
+SystemePaiementFrancais --> CourtierPaye
+Agent_t5 --> VerifierDocuments
+VerifierDocuments --> Aggregate_VerifierDocuments
+Aggregate_VerifierDocuments --> DocumentsVerifies
+DocumentsVerifies --> DetailsSinistre_t2
+CourtierPaye --> DetailsSinistre_t2
+DetailsSinistre_t2 -[norank]-> Agent_t6
+
+Insured_t1 --> CreateRequiredClaimDocument
+CreateRequiredClaimDocument --> Claim_t1
+Claim_t1 --> RequiredClaimDocumentCreated
+RequiredClaimDocumentCreated --> ClaimRequiredDocuments
+ClaimRequiredDocuments --> Insured_t2
+Insured_t2 --> UpdateRequiredClaimDocument
+Agent_t6 --> UpdateClaim : invokes
+UpdateClaim --> Claim_t1 : invoked on
+Claim_t1 --> ClaimUpdated : generates
+ClaimUpdated --> ClaimDetails : projected on
+
+Agent_t6 --> CreateClaimNote : invokes
+CreateClaimNote --> Claim_t1 : invoked on
+Claim_t1 --> ClaimNoteCreated : generates
+ClaimNoteCreated --> ClaimNotes : projected on
+
+Agent_t6 --> OpenWarrantyClaim : invokes
+OpenWarrantyClaim --> Claim_t1 : invoked on
+Claim_t1 --> WarrantyClaimOpened : generates
+WarrantyClaimOpened --> ClaimWarranties : projected on
+
+Agent_t6 --> CloseWarrantyClaim : invokes
+CloseWarrantyClaim --> Claim_t1 : invoked on
+Claim_t1 --> WarrantyClaimClosed : generates
+WarrantyClaimClosed --> ClaimWarranties : projected on
+
+Agent_t6 --> ReopenWarrantyClaim : invokes
+ReopenWarrantyClaim --> Claim_t1 : invoked on
+Claim_t1 --> WarrantyClaimReopened : generates
+WarrantyClaimReopened --> ClaimWarranties : projected on
+
+Agent_t6 --> CloseClaim : invokes
+CloseClaim --> Claim_t1 : invoked on
+Claim_t1 --> ClaimClosed : generates
+ClaimClosed --> ClaimDetails : projected on
+ClaimDetails --> Agent_t7
+
+Agent_t7 --> UpdateRequiredClaimDocument
+Agent_t7 --> ReopenClaim
+UpdateRequiredClaimDocument --> Claim_t2
+ReopenClaim-->Claim_t2
+Claim_t2 --> ClaimReopened
+Claim_t2 --> RequiredClaimDocumentUpdated
+ClaimReopened --> DetailsSinistre_t2

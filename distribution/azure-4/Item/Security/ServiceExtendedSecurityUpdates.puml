@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Security/ServiceExtendedSecurityUpdates
+
+sprite $ServiceExtendedSecurityUpdatesXs [10x10/16z] JSR50S1G242nLyFs7xZV8QVGcD2z8IBg3-ZaTJQjIGFUGaklhxNAiqP8mmy
+
+sprite $ServiceExtendedSecurityUpdatesSm [12x12/16z] TSV10S0G0C30WC3--xO5pzuhuHEwB25sjPK0r2lzTrkgxROJz9d5Z0bwxn8r2ccsXY1pbAI1QVZ9l
+
+sprite $ServiceExtendedSecurityUpdatesMd [16x16/16z] ZSgr0SGm40NH4Osqst-_1-RGB_l0PeRSN6hqFMIikLiHGCpRgxnkpwpwo6ugU4NGup0xJJiM614nfUZ03imjgmKQU-6WQvMDEHrbQ6TNSgWs-08
+
+sprite $ServiceExtendedSecurityUpdatesLg [20x20/16z] {
+jSvH0aCH30NHyH8tOlyBBcXR2-Zv74ZOlAMuM4Oeid8KZzwqHCzg32qk-PTskrjeQWnn9Qa2Vfg6Xo8Pa2TXeu84U0vDW0Rgk0shdNkEopXnD1-jKEh3r6Sp
+DE1YARdZgiOH_NU_mwlhtE85
+}
+
+!procedure ServiceExtendedSecurityUpdates($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Security/ServiceExtendedSecurityUpdates', $name, $tech)
+!endprocedure
+
+!procedure ServiceExtendedSecurityUpdatesCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceExtendedSecurityUpdatesLg>', 'Security', $funcName, $content)
+!endprocedure
+
+!procedure ServiceExtendedSecurityUpdatesGroup($id, $name='Service Extended Security Updates', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceExtendedSecurityUpdatesLg>', $name, $tech)
+!endprocedure

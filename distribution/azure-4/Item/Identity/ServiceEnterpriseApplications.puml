@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Identity/ServiceEnterpriseApplications
+
+sprite $ServiceEnterpriseApplicationsXs [10x10/16z] HSp50S0m34DHcQNz1out-G6_ax7hzhwxPP_SpU-06PyxW7IImrjntOY459g-U2cbI_ql3Pm
+
+sprite $ServiceEnterpriseApplicationsSm [12x12/16z] LSQ50GC13090-bYo_y1r-mWS_YTnakD-PzjwsBwxTLksJ-Tb0ZEPcPSbIZ8fOBUx4rDykNUJ80-I2MMyvf8ODm
+
+sprite $ServiceEnterpriseApplicationsMd [16x16/16z] TOs50KD124El3Nbm-ozSFdKBhbcV0Ensa_ofuwMs7KSzoRrkTwyp4xURv5RpKbSLj5irzGDdISJCatPOZTFQUsUsGKYEzrf-_9yQhJiCues0Ote1
+
+sprite $ServiceEnterpriseApplicationsLg [20x20/16z] {
+ZT3L0SGW54HHO0JIVyFx9kkU-u6SUDgdN6baXDDFw_zD5S-c51kfduSKcvL6HinqDH-mLNban2fQCLRe6GS1MjVpS1xtUBPvDaT5jgsQo13REnk_s7OniztJ
+-Plz-dk5Ppg_Qqqd
+}
+
+!procedure ServiceEnterpriseApplications($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Identity/ServiceEnterpriseApplications', $name, $tech)
+!endprocedure
+
+!procedure ServiceEnterpriseApplicationsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceEnterpriseApplicationsLg>', 'Identity', $funcName, $content)
+!endprocedure
+
+!procedure ServiceEnterpriseApplicationsGroup($id, $name='Service Enterprise Applications', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceEnterpriseApplicationsLg>', $name, $tech)
+!endprocedure

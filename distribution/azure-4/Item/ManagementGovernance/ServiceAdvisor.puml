@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/ManagementGovernance/ServiceAdvisor
+
+sprite $ServiceAdvisorXs [10x10/16z] LSW53G014CJ0FIR_Uf-neKdnoymU75Gxkiw8RlOj4N4_D5AR416g7ZXITZh5S605
+
+sprite $ServiceAdvisorSm [12x12/16z] POW70W111CGumfR_l_TwtsWnyaC1FNtLyvauk49wnq_lPWqaDimi8mxVyjKbLwWrKmxSjtHqKTQr
+
+sprite $ServiceAdvisorMd [16x16/16z] RO-50S0W3C1O5Vd_tk5EqA2jUKFCtpJa37K5hc0_sodQvbQKQMeGiYwVa89JH7Ggr5mmeMdixfFxxD0ysE14Kb2W6MAMrC-02TFXHGdAwRbWXBOCJGat0W
+
+sprite $ServiceAdvisorLg [20x20/16z] {
+VSz70WGX24HHjEZ2SF_xZWaczry-8t9J0d9-9xrMhxJW7NCONDGbDhu8Zy6XjDggBOrDNG6jwpXFZHZLGcfOmSpuQdLXisbmx0RKHXBZ4TlHQhVHjSRVfgga
+6UGPbb5U6vI79NdV9-hxl3mijWLAslG
+}
+
+!procedure ServiceAdvisor($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/ManagementGovernance/ServiceAdvisor', $name, $tech)
+!endprocedure
+
+!procedure ServiceAdvisorCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceAdvisorLg>', 'ManagementGovernance', $funcName, $content)
+!endprocedure
+
+!procedure ServiceAdvisorGroup($id, $name='Service Advisor', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceAdvisorLg>', $name, $tech)
+!endprocedure

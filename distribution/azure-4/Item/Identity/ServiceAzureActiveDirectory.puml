@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Identity/ServiceAzureActiveDirectory
+
+sprite $ServiceAzureActiveDirectoryXs [10x10/16z] LSQ50G0m308mwlz_F5yTWZx-eEuNKxun5I60CBFFcQ8j1A2Oueb9HKpisJq
+
+sprite $ServiceAzureActiveDirectorySm [12x12/16z] PKo50GD134g0W-w_SD_zD6XzbgzH7kSe7u3B72mZDCz9Ug41U5wPQUnpkwXQvi6egaMwahCeh7trR_qc
+
+sprite $ServiceAzureActiveDirectoryMd [16x16/16z] TSw30S0m50JGZyF-4zV6jS6BuoUy4-eh6rATB4nMdLoiZOdPddAoTGoWvcYEDKt7QKONEdfpzxoZaOiPChVhejIqwtXUXOph0-sCQtfhHm
+
+sprite $ServiceAzureActiveDirectoryLg [20x20/16z] {
+VS-54SG020H0JWBVVyLFt7FZEsXy1RoRqZTo9iv4j-M9uCc6KzLafqelLkKJkQMZcTGWiUisb3Wbv_oQ09xCmR021mjLXMnj9WppRi-bJS6gsavMS2uQZgz5
+Q2lQIhEASOxtjZrxqHy
+}
+
+!procedure ServiceAzureActiveDirectory($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Identity/ServiceAzureActiveDirectory', $name, $tech)
+!endprocedure
+
+!procedure ServiceAzureActiveDirectoryCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceAzureActiveDirectoryLg>', 'Identity', $funcName, $content)
+!endprocedure
+
+!procedure ServiceAzureActiveDirectoryGroup($id, $name='Service Azure Active Directory', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceAzureActiveDirectoryLg>', $name, $tech)
+!endprocedure

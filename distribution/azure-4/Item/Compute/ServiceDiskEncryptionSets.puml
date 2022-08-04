@@ -1,0 +1,27 @@
+' definition of the Item azure-4/Item/Compute/ServiceDiskEncryptionSets
+
+sprite $ServiceDiskEncryptionSetsXs [10x10/16z] RSd70G0H00NHZPZflr-PatVwuJhwY97OagI4BIL1MWgLEjFlkAjmBIrj1G
+
+sprite $ServiceDiskEncryptionSetsSm [12x12/16z] TOf50W0n30AhIU3_3zxITPiJCkcVweCoOo38W2c3Y01TMONiKCmswAIApMocNCFL56MrbfloHbM-i
+
+sprite $ServiceDiskEncryptionSetsMd [16x16/16z] {
+VSU50GH030B1FGNIVy7lBXE5_pQl0ZJ5ahEkkP9K7MTpbegFKe80YMCdlS7agAUEsbuD0skVK4S4E0RPFL8wHzfdgseHODYMh1ZCsPYpuy3WmGNXeJNeoCPx
+6Rjvv
+}
+
+sprite $ServiceDiskEncryptionSetsLg [20x20/16z] {
+ROk74GGm2CES00Qo_y1llZUbeZlX7mboTd0ROv4o6r_8yFg4kuVTN8tpxafcTUVDIHsvFhhx40DlRf3BU-ijRYvvRr57uTJMSMy1osfXXT2OutZ3pX1g5uoY
+gloatiP6m7aZueWDQbdbJNgCKklGVSTuD8NgORlxnc83CBKlRguGUAEfA_6FH5utqonppUy2
+}
+
+!procedure ServiceDiskEncryptionSets($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Compute/ServiceDiskEncryptionSets', $name, $tech)
+!endprocedure
+
+!procedure ServiceDiskEncryptionSetsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceDiskEncryptionSetsLg>', 'Compute', $funcName, $content)
+!endprocedure
+
+!procedure ServiceDiskEncryptionSetsGroup($id, $name='Service Disk Encryption Sets', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceDiskEncryptionSetsLg>', $name, $tech)
+!endprocedure

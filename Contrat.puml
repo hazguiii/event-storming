@@ -1,0 +1,105 @@
+@startuml test
+' configures the library
+!global $LIB_BASE_LOCATION="https://raw.githubusercontent.com/tmorin/plantuml-libs/master/distribution"
+
+' loads the library
+!include $LIB_BASE_LOCATION/bootstrap.puml
+
+
+' loads the package bootstrap
+include('eventstorming/bootstrap')
+
+left to right direction
+
+include('eventstorming/Element/System')
+include('eventstorming/Element/Command')
+include('eventstorming/Element/Aggregate')
+include('eventstorming/Element/DomainEvent')
+include('eventstorming/Element/ReadModel')
+include('eventstorming/Element/UserInterface')
+include('eventstorming/Element/Policy')
+include('eventstorming/Element/Person')
+/'External Systems'/
+System('PolicyPricing')
+/'Actors'/
+Person('Agent_t0')
+Person('Agent_t1')
+/'events'/
+DomainEvent('PolicyCreated', 'Policy Created')
+DomainEvent('PolicyPriced', 'Policy Priced')
+DomainEvent('PolicyAmendedWithPricing', 'Policy Amended With Pricing')
+DomainEvent('PolicyAmendedWithoutPricing', 'Policy Amended Without Pricing')
+
+/'Commandes'/
+
+Command('PricePolicy', 'Price Policy')
+Command('CreatePolicy', 'Create Policy')
+Command('AddWarranty', 'Add Warranty')
+Command('AddAmendment', 'Add Amendment')
+Command('AddAddress', 'Add Address')
+Command('ModifyAddress', 'Modify Address')
+Command('AddRequiredDocument', 'Add Required Document')
+
+/'Aggregate'/
+Aggregate('Item_t0') 
+Aggregate('Item_t1') 
+
+/'Policies'/
+Policy('WhenPolicyAmendedThenReprice','When Policy is Amended Then Reprice it')
+/'Read Model'/
+ReadModel('PolicyInformations', 'Policy Informations')
+ReadModel('PolicyPrice', 'Policy Price')
+ReadModel('PolicyDetails', 'Policy Details')
+/'Relations'/
+Agent_t0 --> CreatePolicy : invokes
+CreatePolicy --> Item_t0 : invoked on
+Item_t0 --> PolicyCreated : generates
+PolicyCreated --> PolicyInformations : projected on
+PolicyInformations --> Agent_t1 : used by
+Agent_t1 --> AddWarranty : invokes
+Agent_t1 --> AddAmendment : invokes
+Agent_t1 --> AddAddress : invokes
+Agent_t1 --> ModifyAddress : invokes
+Agent_t1 --> AddRequiredDocument : invokes
+AddWarranty --> Item_t1 : invoked on
+AddAmendment --> Item_t1 : invoked on
+AddAddress --> Item_t1 : invoked on
+ModifyAddress --> Item_t1 : invoked on
+AddRequiredDocument --> Item_t1 : invoked on
+Item_t1 --> PolicyAmendedWithPricing : generates
+Item_t1 --> PolicyAmendedWithoutPricing : generates
+PolicyAmendedWithoutPricing --> PolicyDetails : projected on
+PolicyDetails --> Agent_t1 : used by
+PolicyAmendedWithPricing --> WhenPolicyAmendedThenReprice : triggers
+WhenPolicyAmendedThenReprice --> PricePolicy : invokes
+PricePolicy --> PolicyPricing : invoked on
+PolicyPricing --> PolicyPriced : generates
+PolicyPriced --> PolicyPrice : projected into
+PolicyPrice --> Agent_t1 : used by
+/'
+Agent_t0 --> CreatePolicy : invokes
+Item_t0 --> PolicyAmended : generates
+PolicyAmended --> WhenPolicyAmendedThenReprice : triggers
+WhenPolicyAmendedThenReprice --> PricePolicy : invokes
+PolicyAmended --> PolicyInformations : projected into
+PricePolicy --> PolicyPricing : invoked on
+PolicyPricing --> PolicyPriced : generates
+PolicyPriced --> PolicyPrice: projected into
+PolicyInformations --> PolicyPricing : used by
+'/
+
+/'
+
+user_t1 --> command_t1 : invokes
+command1 --> aggregate : invoked on
+command1 --> system : invoked on
+aggregate --> domain_event : generates
+system --> domain_event : generates
+domain_event --> read_model : projected into
+read_model --> user_interface : displayed by
+domain_event --> policy : triggers
+policy --> command_t2 : invokes
+person --> command_t2 : invokes
+user_interface --> person : used by
+'/
+@enduml

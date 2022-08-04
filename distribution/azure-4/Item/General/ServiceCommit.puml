@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/General/ServiceCommit
+
+sprite $ServiceCommitXs [10x10/16z] Oq01B6mm1ZixEqmGpc3WWBCuKVMnmG586pipEpCpEoSS
+
+sprite $ServiceCommitSm [12x12/16z] PSQ50S0m4090OiZ-0zUzzmBuwdnKiXozKQtXGEF2_FhJu4qg6BrnMTa5Iz6opiCC
+
+sprite $ServiceCommitMd [16x16/16z] VOo50G1H249jSF-5hplUJnMGTw9kPPLUoal37IXtEG2l0RpLtVYj3_HAtG0mQk3kuucnskfOQf8Ynl4_dXohlZ8
+
+sprite $ServiceCommitLg [20x20/16z] ZOz50aGX34FHDDp_mZFvR71uQBrr9oByg4e05YhqdiagNR8OpV2_NOUyHiWtNIdSwzw9QGOBp2ofOsYKhEiZIsSIKNKafQDqb8vaMP0vymC
+
+!procedure ServiceCommit($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceCommit', $name, $tech)
+!endprocedure
+
+!procedure ServiceCommitCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceCommitLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceCommitGroup($id, $name='Service Commit', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceCommitLg>', $name, $tech)
+!endprocedure

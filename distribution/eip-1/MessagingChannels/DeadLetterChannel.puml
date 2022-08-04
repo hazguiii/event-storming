@@ -1,0 +1,17 @@
+' definition of the Item eip-1/MessagingChannels/DeadLetterChannel
+
+sprite $DeadLetterChannelXs [15x10/16z] Ow08i3820PXWP0DocK60dGj8CB82kHniCC38J9gv
+
+sprite $DeadLetterChannelSm [18x12/16z] Ow0UO65504QG01iJ231pWKWMi0W7CmXmCxC0IKP6a10Z6nXmWGXsHkev1W
+
+sprite $DeadLetterChannelMd [25x16/16z] pOa50S10201nxPztxWNsXtCmAipqXdKNpZkMjSr4t8qTeiJsYMYR23ketaOWCkpcGpdyp0m
+
+sprite $DeadLetterChannelLg [31x20/16z] tSt70S0W241HlrY0_VTDxsI1v5sKddwjjw1hswlAmVh-0TdASd0pNNyPD9QbsVe3UZZjxbjGG8zof0Xfa-L5-hOH
+
+!procedure DeadLetterChannel($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'eip-1/MessagingChannels/DeadLetterChannel', $name, $tech)
+!endprocedure
+
+!procedure DeadLetterChannelGroup($id, $name='Dead Letter Channel', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$DeadLetterChannelLg>', $name, $tech)
+!endprocedure

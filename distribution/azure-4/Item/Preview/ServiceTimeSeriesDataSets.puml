@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Preview/ServiceTimeSeriesDataSets
+
+sprite $ServiceTimeSeriesDataSetsXs [10x10/16z] Oq02Z2mWm0XcSN9oCe9Ot5mWm8t6OkDYPeAn69bWifnewZZ1B6O6
+
+sprite $ServiceTimeSeriesDataSetsSm [12x12/16z] VOl50OC040JFjVzw4znXNgjmWb0664UDh1wkH8Dk8qJao55tJTmq5XNoaYDkshoatBw-a9DqW3y
+
+sprite $ServiceTimeSeriesDataSetsMd [16x16/16z] TO-30G0n34NxKUy_xzbuPPo43m1A8dR96req15ETA0PdMJq9CovzbNlR-96hQlEqTncjXOPfxNPKDkT3jWlYP4-NV9NF_7zoEEMwJLGMAStZZ
+
+sprite $ServiceTimeSeriesDataSetsLg [20x20/16z] {
+bSx50KKX44DHaZ48_TVxvBlBtSr1sxi8S0_WHSpF0KS3jY7st0rsiDgmZxq440VJJCSXHfzdcxhqjoLSGLVPrI2bAQnukw-OgdPh4jBak3KY5Q2A7FVlOlp_
+ltvdrWwD6plG8OkgNXayJ2i
+}
+
+!procedure ServiceTimeSeriesDataSets($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Preview/ServiceTimeSeriesDataSets', $name, $tech)
+!endprocedure
+
+!procedure ServiceTimeSeriesDataSetsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceTimeSeriesDataSetsLg>', 'Preview', $funcName, $content)
+!endprocedure
+
+!procedure ServiceTimeSeriesDataSetsGroup($id, $name='Service Time Series Data Sets', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceTimeSeriesDataSetsLg>', $name, $tech)
+!endprocedure

@@ -1,0 +1,27 @@
+' definition of the Item azure-4/Item/Other/ServiceExpressRouteDirect
+
+sprite $ServiceExpressRouteDirectXs [10x10/16z] JSgr0GC1400W8gVxxnkNfyPH16znzTQMCon1XA2eY6lCN5rctpCdl6Kom4ox0m
+
+sprite $ServiceExpressRouteDirectSm [12x12/16z] LS650SGW50Mm8EzJkl--vvhurzEyZNHlvpnuwijMgOwJrXYP4Wf99Mjlz8I9DiU8frsrAE0eHlUKSt45
+
+sprite $ServiceExpressRouteDirectMd [16x16/16z] {
+VOq55aHH248jhFqlU3xJ_LBW7fLl2_uY7VYhDzQU94QmOhXH3AVqg99Ez_4K0m0kOEdNjgW0TfU8-W2cm0LtzJ1HWjI9viouQAtCe6ug_fb9xiAp6XK_xcEf
+KPq
+}
+
+sprite $ServiceExpressRouteDirectLg [20x20/16z] {
+TOy50WGn20E399N_F_WevpQxDJpuIpe-SPAVjlXXIp8_RNkE_M6QkymwTH-jR1FW3gLxAXzXjRFzr3bz-zbl9bA1v4Gnq3kB4RMjjMRRv29JUMp5AHrOjXFr
+fRKIc3nmwl0neudB-2nTh25fzbLu6CkMVS63MAFbJN-JlOg9trm
+}
+
+!procedure ServiceExpressRouteDirect($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Other/ServiceExpressRouteDirect', $name, $tech)
+!endprocedure
+
+!procedure ServiceExpressRouteDirectCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceExpressRouteDirectLg>', 'Other', $funcName, $content)
+!endprocedure
+
+!procedure ServiceExpressRouteDirectGroup($id, $name='Service Express Route Direct', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceExpressRouteDirectLg>', $name, $tech)
+!endprocedure

@@ -1,0 +1,27 @@
+' definition of the Item azure-4/Item/Networking/ServiceTrafficManagerProfiles
+
+sprite $ServiceTrafficManagerProfilesXs [10x10/16z] JOQ70O104CAmmks_i56_XQgLwmlSFnpB7rAYq3S1sbBL5rFV6usXad0U
+
+sprite $ServiceTrafficManagerProfilesSm [12x12/16z] LOTH0a0X2CAeKk7-5txGtrkf6_xKDNMUdWw9FgW9ZfwBDGyqkP1FnfcikAHR4agW7SjhESTtRr4Bk7nXDIKJ_G
+
+sprite $ServiceTrafficManagerProfilesMd [16x16/16z] {
+ROX10WGX3C8GLzl-_yCBgfucfoJuW6FpajDmDcUNRBf7ZmR6nXvhy0vaP3OWCoHCfA0wmDSBOBZBAAic1cjt1ykZgN_kjlw8qjA8eaOgiKTfX7CF2gHpZmt4
+7m
+}
+
+sprite $ServiceTrafficManagerProfilesLg [20x20/16z] {
+TSa7TW0n20DHGGp2zxzmz71BdLst3_xBOZUUHTpP5iynSkMvCTCQ5gR46GPBxfn2PX0m-iK0GIOKTvaeb9BrngfZlkr3TxRjP0WPCJ5FMIPy1g1q22cpRQDF
+Gr5JRtD4Oyo1ZJKRg-dWR6pwWKqRQzMqusxH9m
+}
+
+!procedure ServiceTrafficManagerProfiles($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Networking/ServiceTrafficManagerProfiles', $name, $tech)
+!endprocedure
+
+!procedure ServiceTrafficManagerProfilesCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceTrafficManagerProfilesLg>', 'Networking', $funcName, $content)
+!endprocedure
+
+!procedure ServiceTrafficManagerProfilesGroup($id, $name='Service Traffic Manager Profiles', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceTrafficManagerProfilesLg>', $name, $tech)
+!endprocedure

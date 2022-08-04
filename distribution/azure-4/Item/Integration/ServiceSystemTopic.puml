@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Integration/ServiceSystemTopic
+
+sprite $ServiceSystemTopicXs [10x10/16z] Ou03DZXWPOOAiK948HnsHWQOE3i7280OxCpi426e02D2By8y
+
+sprite $ServiceSystemTopicSm [12x12/16z] JSp50S103CH07QoS_XiEqtpCviUVX4UITZXpqAbogkgqnbqjfphxhMLILzUhoV-dpeT_6m
+
+sprite $ServiceSystemTopicMd [16x16/16z] VOu50W0X20INXly_-BfF7PDUV30VOuO7OejDHDlPR82MBApdW28C7elDXsqIl1ACdJmvyg4W0chFN_sPSROxxDojhvwlxHyW_4Hc
+
+sprite $ServiceSystemTopicLg [20x20/16z] {
+ZS-53GC130D0E-Ig--_xp7pYS731CWuowbBwNXT9nrvs72J1pXm3qC_qwc1n7PC8k3k0Mkh2f1X8cEct2FHI1HK7VySKa-WQsXoZx3gyRyECY7sClFhjAbOV
+mOrxPYq
+}
+
+!procedure ServiceSystemTopic($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Integration/ServiceSystemTopic', $name, $tech)
+!endprocedure
+
+!procedure ServiceSystemTopicCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceSystemTopicLg>', 'Integration', $funcName, $content)
+!endprocedure
+
+!procedure ServiceSystemTopicGroup($id, $name='Service System Topic', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceSystemTopicLg>', $name, $tech)
+!endprocedure

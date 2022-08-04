@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/ManagementGovernance/ServiceApplicationInsights
+
+sprite $ServiceApplicationInsightsXs [10x10/16z] JKk50G112BA1_GV-ZhCbR0sHudc0m5mNpMTAvuMOmGawwhZi30AOroox8pEVgpgEkGC
+
+sprite $ServiceApplicationInsightsSm [12x12/16z] NOp50S1G24DnqlqNxdTx9uZHmrV0E844sgCmJfPs1vYbtDBqb93i1QI5ZLiGMSuE2ZvkBViqCTTrkmeLVW
+
+sprite $ServiceApplicationInsightsMd [16x16/16z] RKvL0aCn36gZSFyBRrcPFxuYsBg2S_1QYnXmdzM87a0CmABQo-6FdR2CtEb8_RioTxNsdhtylhiCkgkY6ygByI-jScYfrM_gh3UcBZvsyn1R0kqV1pl33G
+
+sprite $ServiceApplicationInsightsLg [20x20/16z] {
+TSy50iGW34JHw6Iu_uKtRDr-_TL0lilHqS_KrrtlxpGL6nMPrG4S-sFK55HwWBMGaL8AHA_RWqx2r3glpPGis7okYfIbjlBLOZLj2o2doHPOVJt9P8-i6I57
+nYLvJ7ZanJ1c9fTy9jSom-rcWOoxYTbEFm
+}
+
+!procedure ServiceApplicationInsights($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/ManagementGovernance/ServiceApplicationInsights', $name, $tech)
+!endprocedure
+
+!procedure ServiceApplicationInsightsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceApplicationInsightsLg>', 'ManagementGovernance', $funcName, $content)
+!endprocedure
+
+!procedure ServiceApplicationInsightsGroup($id, $name='Service Application Insights', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceApplicationInsightsLg>', $name, $tech)
+!endprocedure

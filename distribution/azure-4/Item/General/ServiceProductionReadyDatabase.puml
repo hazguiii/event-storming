@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/General/ServiceProductionReadyDatabase
+
+sprite $ServiceProductionReadyDatabaseXs [10x10/16z] Oq02Z2mWm0XYCNDoSZA2MDnS8C2DmMA0i1Y03AWO0uOwJZ2BYG4
+
+sprite $ServiceProductionReadyDatabaseSm [12x12/16z] LOf50G0m3CG6vVhNEyQy3X8-OeH6ZYDdP65CgMNd56FCeZsx3Mx6cs5b4mFOJcnnvoOtPFax1nsHGgW
+
+sprite $ServiceProductionReadyDatabaseMd [16x16/16z] VSz50a0X40BG2GoS-v_tTuUiVDZo4LLpTzDTsE9BOwgPKohK5qTndOCQgwDjwPfwC-MSvyB3JIg5fwTYuMdo_puvNRSVbKL9f_48
+
+sprite $ServiceProductionReadyDatabaseLg [20x20/16z] {
+ZSr50a0X201H1cplVzxVdSxEfuAyfQ1Ze8k0kJLORJZu4Bntph394bZCOm7ma-KQ7LFgKrsjbgrcSnTJRYRStYdbO5dI_EhupajIhZkyK8vM1Yk-t6njjNGo
+awbyC9Kryp6c6FmiFG
+}
+
+!procedure ServiceProductionReadyDatabase($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceProductionReadyDatabase', $name, $tech)
+!endprocedure
+
+!procedure ServiceProductionReadyDatabaseCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceProductionReadyDatabaseLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceProductionReadyDatabaseGroup($id, $name='Service Production Ready Database', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceProductionReadyDatabaseLg>', $name, $tech)
+!endprocedure

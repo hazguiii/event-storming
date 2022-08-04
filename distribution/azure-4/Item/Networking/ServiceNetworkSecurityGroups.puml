@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/Networking/ServiceNetworkSecurityGroups
+
+sprite $ServiceNetworkSecurityGroupsXs [10x10/16z] RSQ53S0m402nK_ky_xxX26EH6VvaCHUp4YWHyK7UYmWPFZZZBfdD4qWfe0C
+
+sprite $ServiceNetworkSecurityGroupsSm [12x12/16z] TSYt0S0m449HbCN-2njTwloh1tWj3bXjxhat-_kcsg_cFgz_pwlc2q1woImhak9zVECnelC3
+
+sprite $ServiceNetworkSecurityGroupsMd [16x16/16z] hSl50S0m34FHW47QV-4gl43_xHdA2lJoWbi4R848Cmi5KhPPplvmOcGpoCHpolxijPo3irQLQdslkloechnuuk47
+
+sprite $ServiceNetworkSecurityGroupsLg [20x20/16z] jSw74G9024HHpbjY_mKhinWem3VvNm0PDz9bkMam2_y6AmTWBvLuT2gGaUEdETbkz9SMXD4B-cucRRVOZQITtvP2oFRpicbCooFVo1PCutOhsKwuoNW2
+
+!procedure ServiceNetworkSecurityGroups($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Networking/ServiceNetworkSecurityGroups', $name, $tech)
+!endprocedure
+
+!procedure ServiceNetworkSecurityGroupsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceNetworkSecurityGroupsLg>', 'Networking', $funcName, $content)
+!endprocedure
+
+!procedure ServiceNetworkSecurityGroupsGroup($id, $name='Service Network Security Groups', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceNetworkSecurityGroupsLg>', $name, $tech)
+!endprocedure

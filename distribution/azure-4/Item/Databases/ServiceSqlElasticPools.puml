@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Databases/ServiceSqlElasticPools
+
+sprite $ServiceSqlElasticPoolsXs [10x10/16z] BKg50G0W3C8M_lzNrqN1ww9AOe4r4ygHGmtxcfrNCz0Ko6Fei0ECd063XXmu3F01
+
+sprite $ServiceSqlElasticPoolsSm [12x12/16z] FOo54G0n2C2uujb_tvTQS9L9oGLkqUfHEyKic0LGqNEDz04CwohI331hfCeSS6iLAL0BCFd8-STaKcOvqrcWVtW1
+
+sprite $ServiceSqlElasticPoolsMd [16x16/16z] LSq54i1024DHraFkV-0EqfK_-a95CiWJYOTpB1mgU-_4ePlO3CT0dQ2rbWr-KplsFWcyfk1n4_6NrHOQOsYZsL_4M_4_OmHpC8AgDha2any
+
+sprite $ServiceSqlElasticPoolsLg [20x20/16z] {
+PSu74e0W34JHY0iaU__xMbRQOEn_dehrETpsEOA-9puJcyf0abpKqz1aKxr9DZMQf9GU_BlwfquWazHDOhmg01Grw0Fk_3LQ_JMO1QDMfVSccEmP1S-vMTF4
+iZufoTQQQhArffhKzwHMkId9gMu
+}
+
+!procedure ServiceSqlElasticPools($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Databases/ServiceSqlElasticPools', $name, $tech)
+!endprocedure
+
+!procedure ServiceSqlElasticPoolsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceSqlElasticPoolsLg>', 'Databases', $funcName, $content)
+!endprocedure
+
+!procedure ServiceSqlElasticPoolsGroup($id, $name='Service Sql Elastic Pools', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceSqlElasticPoolsLg>', $name, $tech)
+!endprocedure

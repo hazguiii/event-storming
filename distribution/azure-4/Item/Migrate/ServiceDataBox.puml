@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/Migrate/ServiceDataBox
+
+sprite $ServiceDataBoxXs [10x10/16z] JSR50G0X0C2mdYBx3qnnyWgdxnUwlo3pglLjebgu76r9C4QJqLu1
+
+sprite $ServiceDataBoxSm [12x12/16z] NSY55S1020JHFPV-2mu3yN_2FFJJ4LczcrMfjRPXs6B0jYWJaHAj2YqetrtajcvZJzrsuZy
+
+sprite $ServiceDataBoxMd [16x16/16z] TSZ50S1030D17HhwxpTW26TUMk7Jt9MiCbsD79FCjEmxCf7dqL6Z1vlP0yYFJCI1FBgOHnCGFVOSI1hpfqMrtey2im8
+
+sprite $ServiceDataBoxLg [20x20/16z] TSl5WKC124NHYy-d_tud1l6SvHD-ixmmdaGEM9xB6UgHDRWolzfie-VG0L-rn1_-HleoT4DVW4osPrKawhZ25thS5FAH0UXB5ZpfuiDdbaTtwtlOpOTKnWa
+
+!procedure ServiceDataBox($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Migrate/ServiceDataBox', $name, $tech)
+!endprocedure
+
+!procedure ServiceDataBoxCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceDataBoxLg>', 'Migrate', $funcName, $content)
+!endprocedure
+
+!procedure ServiceDataBoxGroup($id, $name='Service Data Box', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceDataBoxLg>', $name, $tech)
+!endprocedure

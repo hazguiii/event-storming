@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/General/ServiceCostManagement
+
+sprite $ServiceCostManagementXs [10x10/16z] JSY15G0G203H0zX_uIgWW_wBMFSErbjAIslbCSP89FjTRVqKqmB-7p4zK
+
+sprite $ServiceCostManagementSm [12x12/16z] LSc74O1044BHVmct_ue5iszc8_pr5KIJD5sOhBiMP9mXo70Pcy4vNFTWfD7UTBa4zAfA4QjYm0u
+
+sprite $ServiceCostManagementMd [16x16/16z] RSkt5KCn3CLGA6l_YUq77dN_5ipaIojGzeEMPSBms5KtUXsjEPXWRcFtUgkrJ-B4ofzLUZMgdyPrUgifTKzFti0uiOp4kNya3ABTXzActFu
+
+sprite $ServiceCostManagementLg [20x20/16z] {
+bSst0SKm20JG8xF_mZ-OGwhzAZ9u8t8PoFF244x4BJ8EdK757sEnkprJK1Fi6sEG1r0FXtZMnWm4W316hH3u171MgXAsAtDZ_iuOOCL8UUrlx-tNFsESCpQg
+_wB_1DH7ub2QgIy
+}
+
+!procedure ServiceCostManagement($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceCostManagement', $name, $tech)
+!endprocedure
+
+!procedure ServiceCostManagementCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceCostManagementLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceCostManagementGroup($id, $name='Service Cost Management', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceCostManagementLg>', $name, $tech)
+!endprocedure

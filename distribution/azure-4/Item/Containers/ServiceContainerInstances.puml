@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Containers/ServiceContainerInstances
+
+sprite $ServiceContainerInstancesXs [10x10/16z] JOk54S103CESafph_lCMdXK6w-SArVhpDy01jTaK4F97JVbHa_AsB_ANWwjswLox5m
+
+sprite $ServiceContainerInstancesSm [12x12/16z] VSor0GD134JHlopelrzR4DyJHaEOTz5k89qN3h3YuJyJHEG1J-GWeRU6taFTJQwe3i3aIOP-_IvoD_03
+
+sprite $ServiceContainerInstancesMd [16x16/16z] bSn70iGW509GR43Y_UyxOjfwNeh-YajdnwSntapLfTwzkJCVGZ5sjYVqCW2CTGfmh3hlWZT2td1iWlPf977EQJfn0Ogd3fcaLXZd7HFuAnvtt6VsDyGF
+
+sprite $ServiceContainerInstancesLg [20x20/16z] {
+hSi74iGm24DHkI08tF-yQPZjq_UdQTuug8JIQfVSlHApLvnQpNV9JnAJ1deTh5CTGBjN0zIkf3UqBlS6R3Kmrve_ZE2MdRRMHBk_xcwqD9njMqHS_v1wKiFL
+T7MzZHIiNWn_CIjhg3ejmZYG7G
+}
+
+!procedure ServiceContainerInstances($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Containers/ServiceContainerInstances', $name, $tech)
+!endprocedure
+
+!procedure ServiceContainerInstancesCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceContainerInstancesLg>', 'Containers', $funcName, $content)
+!endprocedure
+
+!procedure ServiceContainerInstancesGroup($id, $name='Service Container Instances', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceContainerInstancesLg>', $name, $tech)
+!endprocedure

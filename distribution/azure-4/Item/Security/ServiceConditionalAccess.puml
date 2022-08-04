@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Security/ServiceConditionalAccess
+
+sprite $ServiceConditionalAccessXs [10x10/16z] JOR50G0m20Dnst_WXhwuA5qw07R7_erCW_8-pnJHVLIbfbLuNOiGcEvEBAXcz0C
+
+sprite $ServiceConditionalAccessSm [12x12/16z] NSpL0S0m20JG13X9zz-txkyBlVOpI64hkdZGLajL9PqrTDULcJphY4Z8wxCTMGcFjOQriliUlqFRFUKAqtwm
+
+sprite $ServiceConditionalAccessMd [16x16/16z] RSU54KC120HHd2Fz5vnZebzsR9_SDkZ1-pq7jGr2wQbVlUxkYeZUtexgp7_tmM7CZ_PrqG3eSESOhRG70qQsnYUZsBnBUVTYlSL0XlpbZ_Sy0G
+
+sprite $ServiceConditionalAccessLg [20x20/16z] {
+ZSg53GGW44JHXNNwxnUtytknoS_0P-YL1ZY2cpGkCx2RoQHctfeCJD9PRzfGnMsS9gJAzDhaZnORfDLuDUpDeR6g9ggjhj6yDIIYthYtlZgPjtcSFCBa6yEM
+PbAus7aTbZm5U8AwPm4
+}
+
+!procedure ServiceConditionalAccess($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Security/ServiceConditionalAccess', $name, $tech)
+!endprocedure
+
+!procedure ServiceConditionalAccessCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceConditionalAccessLg>', 'Security', $funcName, $content)
+!endprocedure
+
+!procedure ServiceConditionalAccessGroup($id, $name='Service Conditional Access', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceConditionalAccessLg>', $name, $tech)
+!endprocedure

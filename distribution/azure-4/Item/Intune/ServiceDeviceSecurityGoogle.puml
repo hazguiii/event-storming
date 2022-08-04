@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/Intune/ServiceDeviceSecurityGoogle
+
+sprite $ServiceDeviceSecurityGoogleXs [10x10/16z] DSQ50G0n2C30uFjF_8Aa1Gvmuy_2tIE0lgs-cQjiyLtfVba7KITKJqZt0W
+
+sprite $ServiceDeviceSecurityGoogleSm [12x12/16z] BSR10S10208mKBNxRrpXp2i0s05ZT5LrSb-Q-DxutlYfth7ZqVC0_MLGzgZC41tvt6a_
+
+sprite $ServiceDeviceSecurityGoogleMd [16x16/16z] RSkr0G0m2011dFqdZdluxX0eeGZiKAMas2NIr5hMxIMpvgNBjanJvWorAiOLIB7GgXq8h-g72p7rga4U0_4gzhxF
+
+sprite $ServiceDeviceSecurityGoogleLg [20x20/16z] PSY73S0m20J0nxJzDuvnUwIS-g68kQAfAMtLtVQLVSRXSNYiY7T-Qph7uTrg9sto7FP81ut_mUkqGsMcYien59NpEXHB7JgkVPYZX8t16w9otTFk0m
+
+!procedure ServiceDeviceSecurityGoogle($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Intune/ServiceDeviceSecurityGoogle', $name, $tech)
+!endprocedure
+
+!procedure ServiceDeviceSecurityGoogleCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceDeviceSecurityGoogleLg>', 'Intune', $funcName, $content)
+!endprocedure
+
+!procedure ServiceDeviceSecurityGoogleGroup($id, $name='Service Device Security Google', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceDeviceSecurityGoogleLg>', $name, $tech)
+!endprocedure

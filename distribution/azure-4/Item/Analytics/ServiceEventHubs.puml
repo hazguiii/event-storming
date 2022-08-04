@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/Analytics/ServiceEventHubs
+
+sprite $ServiceEventHubsXs [10x10/16z] Oq00DXXWO8E9034hiWeaceq9MOm5HYFK8Cm3
+
+sprite $ServiceEventHubsSm [12x12/16z] Oq06RAmmm8RAHgW0OXPML4qmBYiRXC0KH-XcP8Ans120WOK91fW1
+
+sprite $ServiceEventHubsMd [16x16/16z] NSor0G1130F1DQd_ZX-F9pAAa-tG3gLDNyzK0iXALf51rUpDlq-pyVKjfJRmS9E8eFNfIAs9TjykKM8-ar0j9BJ3sDm
+
+sprite $ServiceEventHubsLg [20x20/16z] ZP250S0m20I1b_qthhlcsXWEqOhllCZY1An7sGYbetYJ9N2Jun84v2Gh85UP5XlQjTb9wyglU1fZ7UeXPzbAigO-ikgljyPPAHxe0G
+
+!procedure ServiceEventHubs($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Analytics/ServiceEventHubs', $name, $tech)
+!endprocedure
+
+!procedure ServiceEventHubsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceEventHubsLg>', 'Analytics', $funcName, $content)
+!endprocedure
+
+!procedure ServiceEventHubsGroup($id, $name='Service Event Hubs', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceEventHubsLg>', $name, $tech)
+!endprocedure

@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/General/ServiceBacklog
+
+sprite $ServiceBacklogXs [10x10/16z] Oq06R52QXPs1cHK463YmoB9pm6HPiCXoS30mGcJX
+
+sprite $ServiceBacklogSm [12x12/16z] NSm54G11302nBTU_uMVeN0I4XV5GIYmkT0lg5n06JnwLHTpmPl9nujy9OXU67G
+
+sprite $ServiceBacklogMd [16x16/16z] ZSx50GC124JHZqF_1SSzQ-y-mW6Ul1LUGZpHtGBcTmOZ_0g-PA9sfxHqyT7dqtmnVcdovbZPvvzgV_SvZBFX3
+
+sprite $ServiceBacklogLg [20x20/16z] bSsr0SC034JHVsBjlt2gCDcl4nwdbFD8e2eHDw93tU1vHysCWBXncEKZ-z2gu562kfx_JTkyvkRk0FYD89QFNE-jyjVSw4Hv4ypa92ZliDtYJN701G
+
+!procedure ServiceBacklog($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceBacklog', $name, $tech)
+!endprocedure
+
+!procedure ServiceBacklogCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceBacklogLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceBacklogGroup($id, $name='Service Backlog', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceBacklogLg>', $name, $tech)
+!endprocedure

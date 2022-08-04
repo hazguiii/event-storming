@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/AiMachineLearning/ServiceMachineLearningStudioWorkspaces
+
+sprite $ServiceMachineLearningStudioWorkspacesXs [10x10/16z] JSV50S0W5C3GxxR_lYqEERt06zkeYKIgH5wfQdL3urOZp6oBn_H2H9GQVW
+
+sprite $ServiceMachineLearningStudioWorkspacesSm [12x12/16z] NSd50O0034FH3qs5xhylxkyKuITEMvRKxT8_LvLxL86vUqlP3RXFTpO6BePp2XZFmm7oo9MhgYqk
+
+sprite $ServiceMachineLearningStudioWorkspacesMd [16x16/16z] TSg55S0W30HGBBh_m8syr3dqSxI_09u9Buk8W1sdLNLl061ci9Zw81QrZkoFszkRcrdlNZREVBrw6t0gxz1FK-udi-drm9Na0G
+
+sprite $ServiceMachineLearningStudioWorkspacesLg [20x20/16z] fT350SGW54LH-3xqN_2yABxAZPyuQHjRa-wD11MaWhwR5YJ8iOrJ57blMT6ljwIeZCQiV0MdqnYS-aXcComg7IcV9t8tJjS3h5Bsvt9zpKEkDEWnjJU-wGy
+
+!procedure ServiceMachineLearningStudioWorkspaces($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/AiMachineLearning/ServiceMachineLearningStudioWorkspaces', $name, $tech)
+!endprocedure
+
+!procedure ServiceMachineLearningStudioWorkspacesCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceMachineLearningStudioWorkspacesLg>', 'AiMachineLearning', $funcName, $content)
+!endprocedure
+
+!procedure ServiceMachineLearningStudioWorkspacesGroup($id, $name='Service Machine Learning Studio Workspaces', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceMachineLearningStudioWorkspacesLg>', $name, $tech)
+!endprocedure

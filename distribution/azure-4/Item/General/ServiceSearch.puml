@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/General/ServiceSearch
+
+sprite $ServiceSearchXs [10x10/16z] LKS30G1043kZV-0tvy478pGT0riWjo0Olz-pzApkSJcjOGnOEAC2
+
+sprite $ServiceSearchSm [12x12/16z] NKY30S1038on_y3jMyaPtZDLjH6nQHMbjf3CkVhWaz66pCdT6CMenXHWOHXntX5_
+
+sprite $ServiceSearchMd [16x16/16z] RKo50S0W3Ajl_7ymxZHeO-02hO37I2QOeJPKmlfHROyWD1YkkoddB5PdcBFMcU78iorxenillIW4CzDyg8zVpeWmhB7Z7U4_nmG
+
+sprite $ServiceSearchLg [20x20/16z] {
+VOi74iD020CHufJX_mzEvKPfzjhNTfOu0QKxYs4e9P3IiXA1k9FQCaNC5Phn9SIcz3gLTb2-7CAe_ZZEh1Lsj-mepEbGycLO-rOj5I90YI_5xjOBLzq8i8eP
+hiAu-iILuMKgSmC
+}
+
+!procedure ServiceSearch($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceSearch', $name, $tech)
+!endprocedure
+
+!procedure ServiceSearchCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceSearchLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceSearchGroup($id, $name='Service Search', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceSearchLg>', $name, $tech)
+!endprocedure

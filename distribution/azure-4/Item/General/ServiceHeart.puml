@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/General/ServiceHeart
+
+sprite $ServiceHeartXs [10x10/16z] Oq02N5mi39nSN4064700CIUG1GLOMCmCC2P8CpS8GCm1CQ200qG
+
+sprite $ServiceHeartSm [12x12/16z] LSg50S0W40J1ZM17__NYEiWhbrS1dlhngNZg1reyseuyu7ORzdeH6z7ij1MEvMb_1W
+
+sprite $ServiceHeartMd [16x16/16z] RSo30K0X543H-v7tdpUxJkw1Y-V9UpaGDlhGwNZWiTbV3if_zs0Nt_4sM_wpl5aRFaJZASYiAnILNPzWulDd8jp3LG
+
+sprite $ServiceHeartLg [20x20/16z] ZSt50K0X30FGu53sd_ShxkzOIN1EqaC2SFJuHee-vX_zGmei_Tn_LXlD64mtuz23NpcOeHq90A8UERnCq_gfImFoaKJYwj7FVYE6YlBUeMEnSWC
+
+!procedure ServiceHeart($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceHeart', $name, $tech)
+!endprocedure
+
+!procedure ServiceHeartCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceHeartLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceHeartGroup($id, $name='Service Heart', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceHeartLg>', $name, $tech)
+!endprocedure

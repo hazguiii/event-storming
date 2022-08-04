@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Databases/ServiceAzureSqlVm
+
+sprite $ServiceAzureSqlVmXs [10x10/16z] JSR50S0m54Enbtomk__0PT99VFhncwGMGy9Mcc7Z1yk3NPbRrPqum0O
+
+sprite $ServiceAzureSqlVmSm [12x12/16z] LOs50G0X4CDQB6N_WTyrS6xwCbv-FbJZNW61Xz7X9xZWIg8Sr5rflXpvERDptg3hfhLsUULWSrO
+
+sprite $ServiceAzureSqlVmMd [16x16/16z] PSU50S1024FH10lTV-2wtpk1Zx_y2DJNq9ASbNHHgwsvNS-ZktijTYPxjRMjJJPDUnzu34nVGyTEqZuT1wdmOfc9XnzmuG6h1G
+
+sprite $ServiceAzureSqlVmLg [20x20/16z] {
+ZT350S0m34DHooHt_u7Bp2_yZv4xvcUGlF2VBOGzWz6XJB0tDP2fTDatGweprrO3mgsYRzNBiG5UAc02FhSPvZEbsTHqR6t3spQBgfAJ87bflTjVX6nW2tdI
+0G
+}
+
+!procedure ServiceAzureSqlVm($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Databases/ServiceAzureSqlVm', $name, $tech)
+!endprocedure
+
+!procedure ServiceAzureSqlVmCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceAzureSqlVmLg>', 'Databases', $funcName, $content)
+!endprocedure
+
+!procedure ServiceAzureSqlVmGroup($id, $name='Service Azure Sql Vm', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceAzureSqlVmLg>', $name, $tech)
+!endprocedure

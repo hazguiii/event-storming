@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Storage/ServiceRecoveryServicesVaults
+
+sprite $ServiceRecoveryServicesVaultsXs [10x10/16z] LOo30G0m30I_ZVSVkER5n8-gpYIR9Uk9sNOYuesHY4K4P07HoLWTz1S-rr41
+
+sprite $ServiceRecoveryServicesVaultsSm [12x12/16z] PSRN0S0W203Hayx-2yVwbQV0yJCYnat9Z6JBJ1lYJ565gCuzszrhWU5BJynx6urBmUC1yb8cYsNC-W
+
+sprite $ServiceRecoveryServicesVaultsMd [16x16/16z] TSgr0GDH30DGcPtz5uu-L_Sw0RwOAnx9uUKYhS0IJ6dGMj4Pzyj1NHdeHXCeXc9OsMBwJT3OUaH1NW6AV6Bb1rHFWBGlBBAiy0S
+
+sprite $ServiceRecoveryServicesVaultsLg [20x20/16z] {
+VSi52aDH44FHZ4_tl-7-vr8vMBWG_4SYk7YXPufgZro2KyGiMeiAE6HFgDR8J2vt-BDQJ2joA8cisPjryMe0jQabXctSp0GWFp0UTZPRRK4HXzOiTuoAjuIV
+tW
+}
+
+!procedure ServiceRecoveryServicesVaults($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Storage/ServiceRecoveryServicesVaults', $name, $tech)
+!endprocedure
+
+!procedure ServiceRecoveryServicesVaultsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceRecoveryServicesVaultsLg>', 'Storage', $funcName, $content)
+!endprocedure
+
+!procedure ServiceRecoveryServicesVaultsGroup($id, $name='Service Recovery Services Vaults', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceRecoveryServicesVaultsLg>', $name, $tech)
+!endprocedure

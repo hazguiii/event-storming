@@ -1,0 +1,27 @@
+' definition of the Item azure-4/Item/Compute/ServiceAzureSpringCloud
+
+sprite $ServiceAzureSpringCloudXs [10x10/16z] LKk30G012Boi_UTzCtV0Bs8VTbmHT5on1TZWSP3IW1xQOzfXySl1ntMFS6-u-wm
+
+sprite $ServiceAzureSpringCloudSm [12x12/16z] JSp50S0m30J1DOZxxpSEMpYlOoyNaIJM3GGmqmQdcvrr-zJaTAOrE9c0dPftplAOD4a4-Xn36wV1LU5nSBjo5UUf0m
+
+sprite $ServiceAzureSpringCloudMd [16x16/16z] {
+NStN0GCX30JH8QEb_txjbUFT-niHn5sOX28Hc8gmRCfSJxM-kwmNGEwPDQ0YvED6Qcx5gbXXIPuktXgWYEnH82G4VOxPFOBizy89d6pAdgloQqHmRRtxc8Hq
+x04
+}
+
+sprite $ServiceAzureSpringCloudLg [20x20/16z] {
+RSw55SCm34NHRn9b_tq53XLU6xh7X7-fgcK2YpHYA2eEGxKUuoNpCZkfQkEsncUKuwIC7kgdvJ2QeoEQPPIZ6iu6cK14cCSb629Ku_cabNEZFFosbWF4xDmt
+1_2goQ1jRT0QyUXhsu6CTnsdLSHqxaxw60pV9czZoYoCgaEXcOWG9DA87G
+}
+
+!procedure ServiceAzureSpringCloud($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Compute/ServiceAzureSpringCloud', $name, $tech)
+!endprocedure
+
+!procedure ServiceAzureSpringCloudCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceAzureSpringCloudLg>', 'Compute', $funcName, $content)
+!endprocedure
+
+!procedure ServiceAzureSpringCloudGroup($id, $name='Service Azure Spring Cloud', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceAzureSpringCloudLg>', $name, $tech)
+!endprocedure

@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/General/ServiceResourceGroups
+
+sprite $ServiceResourceGroupsXs [10x10/16z] HKo54G102BBt7_aDk6z9-IjoltvBHAt7wcspPlBeeMwAg9lSUeIlsVwd96GxsFS
+
+sprite $ServiceResourceGroupsSm [12x12/16z] LSt70S102CJ09VPViWNEUir5zAkqHS44Bj1gD4aOJh7EXDsdgM-7p-A-dxHMO1EgcOLi4DgOS
+
+sprite $ServiceResourceGroupsMd [16x16/16z] PSwt0S1G30BH-nAm_yREsTSzAlXdZag0x3vikuW0HWq0Xm2r1razwcntQrVdjDObkRsKfxiaN-wgqj9Xwd0VPco6pIwWLo67kl_BvjiC
+
+sprite $ServiceResourceGroupsLg [20x20/16z] {
+RSy50iGW34JHCCBzRxmoALdzzLU3-j_Yspboa1qy5u-z3wti7gZQkmL0dsot8RLUXcaT8ySq9hLmxpSJ8--MzhSHaZ-C0FBe69BIiLfZTUmHOwpBtFE4-kY7
+mOvskgxicc1MMlNP7G
+}
+
+!procedure ServiceResourceGroups($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceResourceGroups', $name, $tech)
+!endprocedure
+
+!procedure ServiceResourceGroupsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceResourceGroupsLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceResourceGroupsGroup($id, $name='Service Resource Groups', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceResourceGroupsLg>', $name, $tech)
+!endprocedure

@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/General/ServicePreview
+
+sprite $ServicePreviewXs [10x10/16z] Oq02h11098iDncA3iTZ0B90IA0jiAXi3
+
+sprite $ServicePreviewSm [12x12/16z] Oq01pAmGm4WTDXkSpSO6PpF2sIn04ifc0biFr0i
+
+sprite $ServicePreviewMd [16x16/16z] Oy04h730FB1yDbG-6vGFuo7pMHXH-4n02edF2AQPONoOHvc0V
+
+sprite $ServicePreviewLg [20x20/16z] rOo53G0n54Bvkl_6ftMwG5-CODWZCNAWb-mbUybUafUvUYxalMBn12_UF0r7fVKKdVVa1W
+
+!procedure ServicePreview($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServicePreview', $name, $tech)
+!endprocedure
+
+!procedure ServicePreviewCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServicePreviewLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServicePreviewGroup($id, $name='Service Preview', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServicePreviewLg>', $name, $tech)
+!endprocedure

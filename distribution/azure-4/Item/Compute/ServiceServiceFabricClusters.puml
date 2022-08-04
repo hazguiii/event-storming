@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Compute/ServiceServiceFabricClusters
+
+sprite $ServiceServiceFabricClustersXs [10x10/16z] LKk50G0m23BX_ulNQKl85vcvBW0Je9Wmq-RV5zcliVerftTZBYTRBqM_AW
+
+sprite $ServiceServiceFabricClustersSm [12x12/16z] NKk50S0m36e4-F_ZhIxn8EKD0EicEK-9GkSP_qe0Dlcw9Uz-gPI8ZbkTAck2F-H0nJcYIbsLhkC3
+
+sprite $ServiceServiceFabricClustersMd [16x16/16z] ROs50GD1409lZUc_uZVY-JbTWtNFp7o5akeZra5_b96WdfCYLgpY-5Rem5tNrx6vla2-P3X5gMSyVhGCRanTRvHUCcFZSla0z382iBlr4lavmnq
+
+sprite $ServiceServiceFabricClustersLg [20x20/16z] {
+VP3N0G0X24C52Tb_unFxDTyNeKCwa05x-X3SNUR1tPVVFYEBYwvDAe2YaXHDjgu8NquD3sLwQzJLpTSLIEhqTQMu-Nfhhgl8kn5GrltDD62_I-z_W0SaFP3b
+0s2RJrbO2pV4J5fdgzjT
+}
+
+!procedure ServiceServiceFabricClusters($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Compute/ServiceServiceFabricClusters', $name, $tech)
+!endprocedure
+
+!procedure ServiceServiceFabricClustersCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceServiceFabricClustersLg>', 'Compute', $funcName, $content)
+!endprocedure
+
+!procedure ServiceServiceFabricClustersGroup($id, $name='Service Service Fabric Clusters', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceServiceFabricClustersLg>', $name, $tech)
+!endprocedure

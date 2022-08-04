@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/General/ServiceSsd
+
+sprite $ServiceSsdXs [10x10/16z] HSQ50G1120EmdCF-0xzBaDPlFbWenHXNcvGbcBCJPskSBTrIlin3Ev_vsW4
+
+sprite $ServiceSsdSm [12x12/16z] LSQ50G0n2C30uB3_mk_IQu6mo0VuFgSIwkYClPNQJpfxEss8fkvTj42oosQu-J0VyhEtkQkxxRtNJJS
+
+sprite $ServiceSsdMd [16x16/16z] PSg74G9134DHQPtxRnYB3FStlXdZ4lsJdDy1BCD64iYIZvYvZhKLrvgKTVJ920EyY6vi9wcxNquejc5amwF9DJ_DO7v3_YRx7jDv-LdAu7Uu0G
+
+sprite $ServiceSsdLg [20x20/16z] {
+ROs50OH030JZqd_3Vzd7OU1iOlIDw1KU5G_-JkLalPRB9C0yPPv-kYr3vycRYn0YF17O56fHvZMJB1OshcgzocdmgTsS5yAA29nGrepZsJPdL2rq9TkfE_nA
+mJr9YXSEPxFfjcsEHOHd4uEpU2BqmGy
+}
+
+!procedure ServiceSsd($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceSsd', $name, $tech)
+!endprocedure
+
+!procedure ServiceSsdCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceSsdLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceSsdGroup($id, $name='Service Ssd', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceSsdLg>', $name, $tech)
+!endprocedure

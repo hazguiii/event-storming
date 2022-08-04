@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/General/ServiceSearchGrid
+
+sprite $ServiceSearchGridXs [10x10/16z] ROk50S1020CJdFq7hdl_S0aUn0eZnbskC1Cmi6fnhDZTDRkN8hOh6WSp
+
+sprite $ServiceSearchGridSm [12x12/16z] LSQ73GHG24Enzo4YOV-1hrUhcJzdfkVX_qWbgIKujcoF_RaVXqxY10hGw-V-tUo203_VgIwUmiSL
+
+sprite $ServiceSearchGridMd [16x16/16z] ZOa73aC1249nw_qlNBhRlryYy2BMM6Q2vxoyuEhkuAanDlvULU05hnuU-UVWTNSK0n20kAee0UpftTa4qAVFPCyC0EDfVRpApTNCL7cenXyBlG4
+
+sprite $ServiceSearchGridLg [20x20/16z] {
+fOy53aGn24GPA7R_2oyJ-TxOlgJ8gyk68CQ08F-wHS0WDi6ETSe0PwHBOWm8neVBm_bQhdUtPc3LW9n0Pq9W00JaSCA5A79ntOsQGBSUhgTHfRAykbvBTQtZ
+7oRe4YoJArpw9Dxg1m
+}
+
+!procedure ServiceSearchGrid($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceSearchGrid', $name, $tech)
+!endprocedure
+
+!procedure ServiceSearchGridCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceSearchGridLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceSearchGridGroup($id, $name='Service Search Grid', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceSearchGridLg>', $name, $tech)
+!endprocedure

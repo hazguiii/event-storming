@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/Integration/ServiceSqlDataWarehouses
+
+sprite $ServiceSqlDataWarehousesXs [10x10/16z] RKY30S1038ov_xor-yaPdYSYk-jwQ-QjyqO1sTAwewZWjdHLDQmtIh6c6G
+
+sprite $ServiceSqlDataWarehousesSm [12x12/16z] TOg50O0W00Jjt7zVFwJX5FYQAhPj3Keib7i0UdOF2Ot1X6-MrhNlSChV1xo59aEzKDyV
+
+sprite $ServiceSqlDataWarehousesMd [16x16/16z] bStL0KH124DH4ZBUVx-xpztktna1EuiI5a5z4psCiUUahk5W7cAZ9RgqCq42dQSb8KZex0wswawlpInsxzLQ_TTPHeABXxxQOiTaFm
+
+sprite $ServiceSqlDataWarehousesLg [20x20/16z] hSYr0O1G30N0v0cw_xoum--uyg8CmcDIitpD37l99wtbkpMfs8bndCIW-77wE80aC9yKYuHaIudbI0RxYfYeggVprFFrtQ8ltExlQ_PpdE2wgMjdZ
+
+!procedure ServiceSqlDataWarehouses($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Integration/ServiceSqlDataWarehouses', $name, $tech)
+!endprocedure
+
+!procedure ServiceSqlDataWarehousesCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceSqlDataWarehousesLg>', 'Integration', $funcName, $content)
+!endprocedure
+
+!procedure ServiceSqlDataWarehousesGroup($id, $name='Service Sql Data Warehouses', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceSqlDataWarehousesLg>', $name, $tech)
+!endprocedure

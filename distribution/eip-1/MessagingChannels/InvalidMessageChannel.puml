@@ -1,0 +1,17 @@
+' definition of the Item eip-1/MessagingChannels/InvalidMessageChannel
+
+sprite $InvalidMessageChannelXs [15x10/16z] Ow08i3B20HkGomm2B9n0Wf4LoELWWm56PjBC1G
+
+sprite $InvalidMessageChannelSm [18x12/16z] hSW50S102010tFe7tjuBS3ZGH_J1yJ2QSZIPd-11va0SBxIXAl_kuz7a0m
+
+sprite $InvalidMessageChannelMd [25x16/16z] pOa50G0X303drh_lkm05uEOxM1Lcwc6zXVD3tICHRsEl8BazebqYx2P5hZKG6MupK0wJsG4
+
+sprite $InvalidMessageChannelLg [31x20/16z] tSt50S0m20LG7Fx-0zUzMI1v9nmQMiPFLfpTuekU0PRuQEkjuWY4kNxjiZDQ3kJljPjWZ-pUplWhLgQ3Q0FrRGO
+
+!procedure InvalidMessageChannel($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'eip-1/MessagingChannels/InvalidMessageChannel', $name, $tech)
+!endprocedure
+
+!procedure InvalidMessageChannelGroup($id, $name='Invalid Message Channel', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$InvalidMessageChannelLg>', $name, $tech)
+!endprocedure

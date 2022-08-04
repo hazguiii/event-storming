@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/AppServices/ServiceAppServiceCertificates
+
+sprite $ServiceAppServiceCertificatesXs [10x10/16z] Ou03LaOOO8MBeR7OWO21bOM52yvYWSfoiR6pWW43DpTC2pSZb04
+
+sprite $ServiceAppServiceCertificatesSm [12x12/16z] LSor0G1130F1FJ3tN-ypJcQG-93v4bu2SeB_tWVe1iIs4BOvUuAJn9JHJaZLkA1Lt9paiW8
+
+sprite $ServiceAppServiceCertificatesMd [16x16/16z] RSc53GD14CNGlyFGVxt9CLluP3pIP_Sj7oRTe_T_EoklJX4fcC_9P9iSbn-JysfJDzbJS7Vp6J0PbqRRpHZGY_u
+
+sprite $ServiceAppServiceCertificatesLg [20x20/16z] TSk53G0n34DH1yhxptjOXgU8lXniYAwCqCmOnkpOr3HwtfsRozucmRaWuoxe8uux_pQZA4fxhB-1XcQZUyxq8EaXFGRUXi6X6LgQ0MGiDm
+
+!procedure ServiceAppServiceCertificates($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/AppServices/ServiceAppServiceCertificates', $name, $tech)
+!endprocedure
+
+!procedure ServiceAppServiceCertificatesCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceAppServiceCertificatesLg>', 'AppServices', $funcName, $content)
+!endprocedure
+
+!procedure ServiceAppServiceCertificatesGroup($id, $name='Service App Service Certificates', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceAppServiceCertificatesLg>', $name, $tech)
+!endprocedure

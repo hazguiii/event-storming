@@ -1,0 +1,27 @@
+' definition of the Item azure-4/Item/Other/ServiceWindowsVirtualDesktop
+
+sprite $ServiceWindowsVirtualDesktopXs [10x10/16z] JOY74G0X3CFyJHJll-_RLn4aqKadR2ygqoMAmqLq-x9eJ56UfrOj82BbKxIW09EK7m
+
+sprite $ServiceWindowsVirtualDesktopSm [12x12/16z] LSQ73KGn2C1Gfr7a_VSzeQzsBm7ClnrP6MlojICtx2-t2U6OyqXTSjIWPicRaohjcWwb78-LjYE0dLyknek81_m
+
+sprite $ServiceWindowsVirtualDesktopMd [16x16/16z] {
+ROy53i0m30DT2ld__vqiZRShNbB47yj4twrRKhZjofqo-Q6nc0jOkQiItjJJTzK23UXie338YSQEcnSMUzjTslT31xgJ61AbTN_HT_K91VBGjN_75GcRs6dw
+u83O
+}
+
+sprite $ServiceWindowsVirtualDesktopLg [20x20/16z] {
+TO_7WGH120E54prD_l6EWVEtMy_22cynvqqOlWdchgg3_BJ2h0ysOnnNVKFlmVmITjnI0UEN4l1P2lXNcpwg6xcVZgZ2gAA1qn8Lq7RfxKOIKZUhtUpFM-hq
+nT75xbaVDuoZzbSKGH_khY43y_JwwEgN7-AMtqhHE8ynErirGZ9Nae4VgBcx2feB
+}
+
+!procedure ServiceWindowsVirtualDesktop($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Other/ServiceWindowsVirtualDesktop', $name, $tech)
+!endprocedure
+
+!procedure ServiceWindowsVirtualDesktopCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceWindowsVirtualDesktopLg>', 'Other', $funcName, $content)
+!endprocedure
+
+!procedure ServiceWindowsVirtualDesktopGroup($id, $name='Service Windows Virtual Desktop', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceWindowsVirtualDesktopLg>', $name, $tech)
+!endprocedure

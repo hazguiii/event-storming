@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/Integration/ServiceEventGridTopics
+
+sprite $ServiceEventGridTopicsXs [10x10/16z] Oq00DXXWO8K8W6bs86100ymGPKY01QgE1Q4NOHu
+
+sprite $ServiceEventGridTopicsSm [12x12/16z] LOo30G0n300ltd_YHzsBoKbkhZnG0GFYi_hXnCzpsVsUxlrOtRZ-o-O5
+
+sprite $ServiceEventGridTopicsMd [16x16/16z] NSp50S1030F1DSZfl-BmuRoCOcShQeMIGNfw3w3-7ZXUIMF-xniJp2FL9rYq14ztF_Y4JVaHAATZYLBDg1MR2m
+
+sprite $ServiceEventGridTopicsLg [20x20/16z] ZT230G0n30NGw2VxJtn6tRxQe5LUQ_O1b57WwfEhtx--KpmeWJ00eLGvk-HliXjEwd-d-eS-aAUadEUjE5V5rscMtuzD_xVzxsYzT_6lZ1fs
+
+!procedure ServiceEventGridTopics($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Integration/ServiceEventGridTopics', $name, $tech)
+!endprocedure
+
+!procedure ServiceEventGridTopicsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceEventGridTopicsLg>', 'Integration', $funcName, $content)
+!endprocedure
+
+!procedure ServiceEventGridTopicsGroup($id, $name='Service Event Grid Topics', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceEventGridTopicsLg>', $name, $tech)
+!endprocedure

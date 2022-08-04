@@ -1,0 +1,49 @@
+@startuml test
+' configures the library
+!global $LIB_BASE_LOCATION="https://raw.githubusercontent.com/tmorin/plantuml-libs/master/distribution"
+
+' loads the library
+!include $LIB_BASE_LOCATION/bootstrap.puml
+
+
+' loads the package bootstrap
+include('eventstorming/bootstrap')
+
+left to right direction
+
+include('eventstorming/Element/System')
+include('eventstorming/Element/Command')
+include('eventstorming/Element/Aggregate')
+include('eventstorming/Element/DomainEvent')
+include('eventstorming/Element/ReadModel')
+include('eventstorming/Element/UserInterface')
+include('eventstorming/Element/Policy')
+include('eventstorming/Element/Person')
+
+System('system')
+together group1 { 
+    Person('user1')
+    Command('command1', 'command')
+    Aggregate('aggregate')
+    DomainEvent('domain_event', 'domain event')
+}
+ReadModel('read_model', 'read model')
+UserInterface('user_interface', 'user interface')
+Command('command2', 'command')
+Policy('policy','when then')
+Person('person')
+
+
+user1 --> command1 : invokes
+command1 --> aggregate : invoked on
+command1 --> system : invoked on
+aggregate --> domain_event : generates
+system --> domain_event : generates
+domain_event --> read_model : projected into
+read_model --> user_interface : displayed by
+domain_event --> policy : triggers
+policy --> command2 : invokes
+person --> command2 : invokes
+user_interface --> person : used by
+
+@enduml

@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/ManagementGovernance/ServiceMetrics
+
+sprite $ServiceMetricsXs [10x10/16z] TKV50O004EAwzf_NzcFGu8NCU_bzxRYsqnWHsmbCeeeRjI_tRStFMW4
+
+sprite $ServiceMetricsSm [12x12/16z] VOg50OD034NVQMp_ULlS8VgDfwfITcnfV290OofJo7M2ZTHesHDLyXJBaL1DxbWTCJ3Wn8Xh7t7O1_u3
+
+sprite $ServiceMetricsMd [16x16/16z] dSk50GCn20301AViF-yBKFUFSiZui4ZrpcmsAweFZ8kgaFMk3ZFPnwc9mbjfTdC6araG8hQeXrKvpMQW9n_kb1vkO_UsoeXfvl8KIKV04Qy
+
+sprite $ServiceMetricsLg [20x20/16z] {
+jT350KGX30JGP20ofFzwlx9kfyLvEF8x8A8zcsNcYv5NQvVQ-uKYGizvUY7TTka7TRaPkVTWk9hPDTlaRiSSSnTKvRa_BWTDQzl-qFtwM-CoZwHW31SG5rFJ
+qxPmCNS_RLJzoynCTF-394L9anK
+}
+
+!procedure ServiceMetrics($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/ManagementGovernance/ServiceMetrics', $name, $tech)
+!endprocedure
+
+!procedure ServiceMetricsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceMetricsLg>', 'ManagementGovernance', $funcName, $content)
+!endprocedure
+
+!procedure ServiceMetricsGroup($id, $name='Service Metrics', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceMetricsLg>', $name, $tech)
+!endprocedure

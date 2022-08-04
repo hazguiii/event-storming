@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/AzureStack/ServiceUserSubscriptions
+
+sprite $ServiceUserSubscriptionsXs [10x10/16z] JOg70GC1209HuPBz5_xUpYxeIv8vbaxWs0QkJR-DOt6gCh8CPMP6mEorkKwsxNzYhG
+
+sprite $ServiceUserSubscriptionsSm [12x12/16z] NOk50S0m3CCCWVt_y9XQXS6Oo4n_RURTru7VlllUgxiBqlbFCcNnb5BfY3YLFCGMUiT76EYR_GNBJGaR
+
+sprite $ServiceUserSubscriptionsMd [16x16/16z] RSm10a0m34FHjadg_ZUM3O0FlBB5NvHK3pgSdkm-Y1vTpfTZcIaU0ty6fqhCJ0a8cf2q6_IWNNbFMOGvodP07Pjpt82qh_Ws_JzuPQu
+
+sprite $ServiceUserSubscriptionsLg [20x20/16z] {
+TT070eCm34FHs9BStl_4nK5byzYVdV4gAJ5FAJJXs6Hnk5Ejgh0tbcblAEFOVGo7HhTnL5sg7vFmPL8i9003T5BEHYm8VmaZbYrM8sgAtWej_X-CN3U0Nzaq
+rq3wUtTyQkpsFV78ugJJ3m
+}
+
+!procedure ServiceUserSubscriptions($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/AzureStack/ServiceUserSubscriptions', $name, $tech)
+!endprocedure
+
+!procedure ServiceUserSubscriptionsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceUserSubscriptionsLg>', 'AzureStack', $funcName, $content)
+!endprocedure
+
+!procedure ServiceUserSubscriptionsGroup($id, $name='Service User Subscriptions', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceUserSubscriptionsLg>', $name, $tech)
+!endprocedure

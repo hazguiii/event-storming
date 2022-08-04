@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Networking/ServiceLoadBalancers
+
+sprite $ServiceLoadBalancersXs [10x10/16z] BSQ55S103CDGlGRK_HS-3jYVFSMRhhumub8DNJGaThOHNnCXAfH-71ui9XUB_yO4
+
+sprite $ServiceLoadBalancersSm [12x12/16z] FSV70KCn5CCmviaMi__2AR_X1WwRH_kaEtVKw17LbqTSIh6xDPbsaaXL1kjmHWq_5M8uT66u-1v-lW
+
+sprite $ServiceLoadBalancersMd [16x16/16z] LSW10a0m40F18xri__zY0H1eP-jQrs-s_vJxHuad01RSWTDtmESb4U_K66LhwI5iXgJObREf12Y5k5ah8Ll2J5Ldw7fuXFmV9ipyPlW4VF0PSpql6m
+
+sprite $ServiceLoadBalancersLg [20x20/16z] {
+NOm94iGm2CDC09F_ltWfcrkzFAecc8ZZHSYIZo9VPUfNAH6QUF1GYIk_zrR39JmK1Lh3nrdrMu7yvfx72qX2pTJ2-NTedskQPEZLAqX3Z8qea7YjXeGrTNsB
+sW9RrIWjFwCQ33Ug0Nk3TSL5z9xwWRlw0G
+}
+
+!procedure ServiceLoadBalancers($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Networking/ServiceLoadBalancers', $name, $tech)
+!endprocedure
+
+!procedure ServiceLoadBalancersCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceLoadBalancersLg>', 'Networking', $funcName, $content)
+!endprocedure
+
+!procedure ServiceLoadBalancersGroup($id, $name='Service Load Balancers', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceLoadBalancersLg>', $name, $tech)
+!endprocedure

@@ -1,0 +1,27 @@
+' definition of the Item azure-4/Item/General/ServiceMedia
+
+sprite $ServiceMediaXs [10x10/16z] 7SRH4S0W34En1C3btdd_UMlGb-hQzHm7oP9qNgNTtOOI7GisZB7MuYkOC_kKEP5KZUsRm57r0m
+
+sprite $ServiceMediaSm [12x12/16z] BSst5GGn54BHxmsQ_kjTeRClkaG8qvH_7pj3LjNU0JoMQL_7TIXRm6gDZ09oO6OHroM0kzDDds1L9OFp3LKg0hohZdTsU6mYFm
+
+sprite $ServiceMediaMd [16x16/16z] {
+9Sc95S0W20HHRfyR-wytB4mE_I2Rf_7OyatGvSKt_b1aJHm1AH9KgZgDNPkoQf_sqSquY3emisP4-sI1jeXn6G1tNzygMVkurjy9biqGRRzN5DSY1RpkaYfT
+qXF9xYYb-m4
+}
+
+sprite $ServiceMediaLg [20x20/16z] {
+NShB5KGX20HHL6WLpJ_UWPxth-Kz9MTgJPxLkTd2HMEVkHza08RJbhicAVxnTfuLh9LIPnYHOeLLMgFLSjR34DRzjAe86mguroX5QJ3utr9e7MryR03YKSl-
+rX4smxeUrX2fMDZQffaX4n7Qzb0m3Ik1E-jWacaQMpwd717Pa2iRtBgm7m
+}
+
+!procedure ServiceMedia($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceMedia', $name, $tech)
+!endprocedure
+
+!procedure ServiceMediaCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceMediaLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceMediaGroup($id, $name='Service Media', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceMediaLg>', $name, $tech)
+!endprocedure

@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/IoT/ServiceTimeSeriesInsightsEventSources
+
+sprite $ServiceTimeSeriesInsightsEventSourcesXs [10x10/16z] JSkr0G1020F0uEo_yBjm3Hfy9bj0iUNeR5gT3mICZfRPnR1tEI5BrgyE
+
+sprite $ServiceTimeSeriesInsightsEventSourcesSm [12x12/16z] LSp50G0m20F0fBx_mdNiFZZmca6363jF-NXvhbicqkcNZJotu7VoqhVVBsFhnFtvDqRyRnO
+
+sprite $ServiceTimeSeriesInsightsEventSourcesMd [16x16/16z] RSc73SDG30DHgcl_YGD-fjiFzN3urx_GFtFlsaDU7IK6KpUL6G2slVXFqsbF2kRfN6fdgiKGouO9CEedTNpfGVzw
+
+sprite $ServiceTimeSeriesInsightsEventSourcesLg [20x20/16z] VS-t0S0W44FHox3_mZOvmozV9S4fsr8mvJbdO09ptbsDkDQDjORTB4SI370sH8X5mx67KIbJDd4vYbBDvzX7b6ArlW-mzloxsvOUJ7u
+
+!procedure ServiceTimeSeriesInsightsEventSources($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/IoT/ServiceTimeSeriesInsightsEventSources', $name, $tech)
+!endprocedure
+
+!procedure ServiceTimeSeriesInsightsEventSourcesCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceTimeSeriesInsightsEventSourcesLg>', 'IoT', $funcName, $content)
+!endprocedure
+
+!procedure ServiceTimeSeriesInsightsEventSourcesGroup($id, $name='Service Time Series Insights Event Sources', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceTimeSeriesInsightsEventSourcesLg>', $name, $tech)
+!endprocedure

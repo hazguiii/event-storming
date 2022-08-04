@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Databases/ServiceAzureDatabaseMigrationServices
+
+sprite $ServiceAzureDatabaseMigrationServicesXs [10x10/16z] ROQr0G0m408Xplu3lxOv5CaXUfCyz-v8dPW8yO8kYMilIe3sMki8GJrydmC
+
+sprite $ServiceAzureDatabaseMigrationServicesSm [12x12/16z] XST15aGn14JH1rJR_uRx937_5oWERsVrmLLgf09S4Y05_8wxy-wYps4cCoj3Cp2gayuBSN_d-pVu0m
+
+sprite $ServiceAzureDatabaseMigrationServicesMd [16x16/16z] dOf50aGn24E3b_jVUDACxV-hG0HliXD_eidViPa9Fd_BuchmcPOSILmZhpoNWiP0KrgaPhl1NKsStOoiolJPRM1tAiqyYn78K9CgjaLyjEEPzey6UG4
+
+sprite $ServiceAzureDatabaseMigrationServicesLg [20x20/16z] {
+jSX90WGX24FH08de_I_SMDZpkhuZ3yyqPEXUSlL9BL_8p2H6tV6IIlMfPpIDflEbrUlPETYVmfnTsVa1yy_KHW-3k-iQmBKMZPH4Mku9g3iPlWlDcb3DbH9t
+6asLwMLodE9bZhlCU2omUm
+}
+
+!procedure ServiceAzureDatabaseMigrationServices($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Databases/ServiceAzureDatabaseMigrationServices', $name, $tech)
+!endprocedure
+
+!procedure ServiceAzureDatabaseMigrationServicesCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceAzureDatabaseMigrationServicesLg>', 'Databases', $funcName, $content)
+!endprocedure
+
+!procedure ServiceAzureDatabaseMigrationServicesGroup($id, $name='Service Azure Database Migration Services', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceAzureDatabaseMigrationServicesLg>', $name, $tech)
+!endprocedure

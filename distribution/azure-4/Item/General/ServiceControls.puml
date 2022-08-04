@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/General/ServiceControls
+
+sprite $ServiceControlsXs [10x10/16z] Os3WWY92B1OmnOA3nOh4OcI4iDY050W1
+
+sprite $ServiceControlsSm [12x12/16z] VSQ35G11442nlnZsN_3PU4eW6oN1W_6AZC_yUMlZPw3tyJFVbzjZlGgzrVqoEdu
+
+sprite $ServiceControlsMd [16x16/16z] bSU50GCm20313mxxxrjtRmJ-G4SX1wY1VGRq2Cn-_EqeFxbg0Mkje-LGcDd1-nB0lza_E_QkllTQw-BmVUfhRm4
+
+sprite $ServiceControlsLg [20x20/16z] lSw53S1020NGt-3ils_TOvKpzCK044bxzHHCBrDFrLjPDxxLjXbWfit0pAjnKHDvOn5tMw_TJLNMxQKD
+
+!procedure ServiceControls($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceControls', $name, $tech)
+!endprocedure
+
+!procedure ServiceControlsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceControlsLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceControlsGroup($id, $name='Service Controls', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceControlsLg>', $name, $tech)
+!endprocedure

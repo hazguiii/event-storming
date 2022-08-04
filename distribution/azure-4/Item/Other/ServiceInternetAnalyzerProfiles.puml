@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Other/ServiceInternetAnalyzerProfiles
+
+sprite $ServiceInternetAnalyzerProfilesXs [10x10/16z] JSQ50G0n2C30uB3_mE_IQu6myipaSiQPTJXMF7KsVV5eva8KO0USXubmSX7H7G
+
+sprite $ServiceInternetAnalyzerProfilesSm [12x12/16z] NSU50G0n2C3056V_WT-rLo4myOWOPzgUSMISRClS-F4pScU9RakTpAheaseRrD62Sr6mkqK5ETDqOoi
+
+sprite $ServiceInternetAnalyzerProfilesMd [16x16/16z] RSU70SD024FH3mP4zbyuxlKULGpLp1znbeyuRuDPr26ObHP6p3i1dTbAmdKeYvBJ1qMeyvKDVhk65hFKAc7YOWvkdC8y20uJ-7fsiVi3
+
+sprite $ServiceInternetAnalyzerProfilesLg [20x20/16z] {
+TSh70S0W34DHkGco_y1f5AU-an4V_zJ9K5mv6oJZmUCwZeYqQzHvcqeZxOfZAzrvnl6Pco5w2os9fhwNYdhXxb6hVMo0BSc1M0fkem51D3O0Zgl-DbpPqOi9
+afYA7lLbT6dKCjDf0m
+}
+
+!procedure ServiceInternetAnalyzerProfiles($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Other/ServiceInternetAnalyzerProfiles', $name, $tech)
+!endprocedure
+
+!procedure ServiceInternetAnalyzerProfilesCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceInternetAnalyzerProfilesLg>', 'Other', $funcName, $content)
+!endprocedure
+
+!procedure ServiceInternetAnalyzerProfilesGroup($id, $name='Service Internet Analyzer Profiles', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceInternetAnalyzerProfilesLg>', $name, $tech)
+!endprocedure

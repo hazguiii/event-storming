@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/General/ServiceToolbox
+
+sprite $ServiceToolboxXs [10x10/16z] JSQ50G0W24JHiyZzvxNhAV3nAyEgFNI0Zr7kFaeM9kISHn51imwzw6W
+
+sprite $ServiceToolboxSm [12x12/16z] NSQ70O0m30D1fRVzz-L5XqjiltwoQHU496IWCAeFfOSQrbeDwfXpzjwgScuTf3iFSxCfqE6n0G
+
+sprite $ServiceToolboxMd [16x16/16z] RSs55O1040FHd5l__PBDul3HUMVu4-JgBEKSZlfuQqJZDHFg4zeJufEFBve-tesQNtPf_MJxsN7Diwcf3L7parMaViBB1W
+
+sprite $ServiceToolboxLg [20x20/16z] bSe55e1024LHLFZM_jThJ7TSdNe7cYAMJukzDnh_mEpFZP2HOjipGcjcCtF7_TDtc7R6xOZi08XPmWpL53_sD_cJd8Pkvmdcqp7Dy9CaIArKy08
+
+!procedure ServiceToolbox($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceToolbox', $name, $tech)
+!endprocedure
+
+!procedure ServiceToolboxCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceToolboxLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceToolboxGroup($id, $name='Service Toolbox', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceToolboxLg>', $name, $tech)
+!endprocedure

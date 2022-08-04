@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/General/ServiceMarketplace
+
+sprite $ServiceMarketplaceXs [10x10/16z] Oq06x0mS40QGPWBJR1300cOnmrX02GYB4GJGM120O34n
+
+sprite $ServiceMarketplaceSm [12x12/16z] NSQ74K0n24En1zXSzb_uznfT4vF1YEHKJdHCaYLNGVJ9XkmMlf_0-IfsnwNOwNWhDxtVVTeVvVF12W
+
+sprite $ServiceMarketplaceMd [16x16/16z] RSV50GGX50MmPqZ_3GD_NIQtu4h6cAtXPQ85ukiTJP3kITBJSjWyxoyjkhu1VbmuKdUTA7oSdG_dgVldFIe-R_MNlriuICgfdsm
+
+sprite $ServiceMarketplaceLg [20x20/16z] VSk53G1124HH6E6s_uRFtNviU0dnNNMjx3nJnt3ByDbQ1A5NqtPJKcdCiiZPwvnL_qRVZTiu3365iyLI-Z3dbbyCn--RbR3amqwzcv-6ZBsaH5aOzm
+
+!procedure ServiceMarketplace($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceMarketplace', $name, $tech)
+!endprocedure
+
+!procedure ServiceMarketplaceCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceMarketplaceLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceMarketplaceGroup($id, $name='Service Marketplace', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceMarketplaceLg>', $name, $tech)
+!endprocedure

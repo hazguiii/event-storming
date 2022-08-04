@@ -1,0 +1,27 @@
+' definition of the Item azure-4/Item/ManagementGovernance/ServiceManagedApplicationsCenter
+
+sprite $ServiceManagedApplicationsCenterXs [10x10/16z] RSQt5S90500m_V0kxJymLmAsAdcNrM4Vz6t3Y6nxJoB6ZJ1656ifOiJOI3NIZmy
+
+sprite $ServiceManagedApplicationsCenterSm [12x12/16z] VSUr0G012C30uB3_mA_LQweBVxaxRgT4TUF08JKq8DB5HSOQ93CPgOAC96dAm2npSuxWm7R5Ncuft5i1
+
+sprite $ServiceManagedApplicationsCenterMd [16x16/16z] {
+ZOa7WWCm2CDiOWpv_uUFwzwjCeNm6rJSM2n9YzxDGvCEeuMr3raHyvyRFUh4H95THpUJatANXS6qiJjB1H1EUBpOe_08jH3j6ey4apRRzkGfW-qo3bZAT98u
+iHJ4M_u
+}
+
+sprite $ServiceManagedApplicationsCenterLg [20x20/16z] {
+hSf9bWGm209G4KDYt__0ZJLkQsAZ_4Vy85b5-k8fmQe28hl_BW9t8i4veRwWpSivT1lZGe7ZG1dEc8H8coVTiNKpUPbdsRXX0soIHwjtN4WKxmRjCfLDIDg2
+Pvzmt6rInchfZ77D5h9lgJEcskR8EICJpKDBhhWdvImYtiy_
+}
+
+!procedure ServiceManagedApplicationsCenter($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/ManagementGovernance/ServiceManagedApplicationsCenter', $name, $tech)
+!endprocedure
+
+!procedure ServiceManagedApplicationsCenterCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceManagedApplicationsCenterLg>', 'ManagementGovernance', $funcName, $content)
+!endprocedure
+
+!procedure ServiceManagedApplicationsCenterGroup($id, $name='Service Managed Applications Center', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceManagedApplicationsCenterLg>', $name, $tech)
+!endprocedure

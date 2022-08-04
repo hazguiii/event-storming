@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/ManagementGovernance/ServiceActivityLog
+
+sprite $ServiceActivityLogXs [10x10/16z] Oq005aOm0BBO8038OaUms1b090Y30HgB0mo0B0vq5Yi3
+
+sprite $ServiceActivityLogSm [12x12/16z] Oq01x52QaO61YGqACDYip400ORCpWtMnWzbWWCdcW09Ys9mC
+
+sprite $ServiceActivityLogMd [16x16/16z] Oy00pEm8DWSGio40cNnci5aiK3uxEmkOpyhE3k73095y3WGWbS_4Zie7IWC
+
+sprite $ServiceActivityLogLg [20x20/16z] hT2r0G0n3C30n6pll-ypCqJbbKh7YVAYQ8aqBqhIcgnwPtfibFfcKyN1L7KosjjK6RDblTatqxqDJrUcZTG
+
+!procedure ServiceActivityLog($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/ManagementGovernance/ServiceActivityLog', $name, $tech)
+!endprocedure
+
+!procedure ServiceActivityLogCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceActivityLogLg>', 'ManagementGovernance', $funcName, $content)
+!endprocedure
+
+!procedure ServiceActivityLogGroup($id, $name='Service Activity Log', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceActivityLogLg>', $name, $tech)
+!endprocedure

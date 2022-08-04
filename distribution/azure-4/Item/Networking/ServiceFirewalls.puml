@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Networking/ServiceFirewalls
+
+sprite $ServiceFirewallsXs [10x10/16z] Oq01R6niC0Q4oSWE1a0MEnnmm0039nSF271oCd1omrWC760Ms10e2m
+
+sprite $ServiceFirewallsSm [12x12/16z] NSd50G0n30F13PlwR_SOCnzR4hFQAvU-I-Sx3kTtsWPvZ26leYzKpKOFy-sdRw-RYx2vUdRb12i
+
+sprite $ServiceFirewallsMd [16x16/16z] ROw50S0m2C1m_V_UkQ-ffWB064Hy6DaANvUsmwVwmQQxNUvF32XUkCSR_JXaLdTdv3fdWco-t6okIt5PPTPL5IcmmElzzdwrZt-P0G
+
+sprite $ServiceFirewallsLg [20x20/16z] {
+bSnL0iGW30JGgIKPuFxdNLo_zhLO3F-v9BanUQNuHkYMvXaXxUeehKRirOMyCQO7F7OGjPFO2IHT61Z1IE-S2o8I3nz32iJOMeVeyxagLOjHa5aOKDaq3vKS
+TQSV
+}
+
+!procedure ServiceFirewalls($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Networking/ServiceFirewalls', $name, $tech)
+!endprocedure
+
+!procedure ServiceFirewallsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceFirewallsLg>', 'Networking', $funcName, $content)
+!endprocedure
+
+!procedure ServiceFirewallsGroup($id, $name='Service Firewalls', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceFirewallsLg>', $name, $tech)
+!endprocedure

@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/InternetOfThings/ServiceTimeSeriesInsightsAccessPolicies
+
+sprite $ServiceTimeSeriesInsightsAccessPoliciesXs [10x10/16z] DSct0G0m3091v4VxZ-pCLGGTraSY57wXknat7hbHKYMXpqx2vrq
+
+sprite $ServiceTimeSeriesInsightsAccessPoliciesSm [12x12/16z] RKl50G0X0ABsN_dILZuqFWGDQOOsN8m_fCHDGvycYlbaU-2iqtJIjVDTRm
+
+sprite $ServiceTimeSeriesInsightsAccessPoliciesMd [16x16/16z] XS-53GK1409Hs67xB_dBkTz4NuYXCKVRAcHBBEALb25UE9R5IRf93JRqFz2O6TFIo3MFN0lKpYzx9pfukwzllW
+
+sprite $ServiceTimeSeriesInsightsAccessPoliciesLg [20x20/16z] VT072WH10091ntR__-JB9nDWcrn8KlySxP5aR8Jb5G79pCYx0HEQbccMwrs89_i6-aUpsaojD3VJR6Et0AULPijckLAQBRUV5grVJm
+
+!procedure ServiceTimeSeriesInsightsAccessPolicies($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/InternetOfThings/ServiceTimeSeriesInsightsAccessPolicies', $name, $tech)
+!endprocedure
+
+!procedure ServiceTimeSeriesInsightsAccessPoliciesCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceTimeSeriesInsightsAccessPoliciesLg>', 'InternetOfThings', $funcName, $content)
+!endprocedure
+
+!procedure ServiceTimeSeriesInsightsAccessPoliciesGroup($id, $name='Service Time Series Insights Access Policies', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceTimeSeriesInsightsAccessPoliciesLg>', $name, $tech)
+!endprocedure

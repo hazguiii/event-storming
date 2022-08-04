@@ -1,0 +1,27 @@
+' definition of the Item azure-4/Item/IoT/ServiceDeviceProvisioningServices
+
+sprite $ServiceDeviceProvisioningServicesXs [10x10/16z] 7Sgr0G0n40F1CVlwB_X1YN111-nXRLI9xHWasPiTP2-oVPvDl0zMmyWmr6Yy
+
+sprite $ServiceDeviceProvisioningServicesSm [12x12/16z] HSQ53SD050KmVyYhRl-5gs94Dj00IJOPr6cBFg-RV1-le2Al98ZCtiTGNcykiZjUGVNBkjR3lehEgSOJ
+
+sprite $ServiceDeviceProvisioningServicesMd [16x16/16z] {
+HOpNOKC120EF8lBOV-0K4TltGr7XYEH3pF6IfFjs1R1RdDQxmBFytxbVCEqLesJAsyZtC4WjZV--kxc6knsDGBulc0Cf_iHK0FhxTTeZZaWbVXGqb0fJwcT7
+LezujiBR3m
+}
+
+sprite $ServiceDeviceProvisioningServicesLg [20x20/16z] {
+NK-74SGm39ADo9lz5tvSKqZXG3qsIeqtyfh8sxA2CsbUHMeLCJDWqLbI1bSPfPuAAIANLwLYQxNWdc_DtPQOBIzuvZrySiP5AvBvyNBcSNkxjkzOXeSrmxHc
+fptiolxREMHisAj4lCrIbp2NvO7d73AZYUXyW0of8KkyyDF9-GC
+}
+
+!procedure ServiceDeviceProvisioningServices($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/IoT/ServiceDeviceProvisioningServices', $name, $tech)
+!endprocedure
+
+!procedure ServiceDeviceProvisioningServicesCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceDeviceProvisioningServicesLg>', 'IoT', $funcName, $content)
+!endprocedure
+
+!procedure ServiceDeviceProvisioningServicesGroup($id, $name='Service Device Provisioning Services', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceDeviceProvisioningServicesLg>', $name, $tech)
+!endprocedure

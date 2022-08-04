@@ -1,0 +1,27 @@
+' definition of the Item azure-4/Item/General/ServiceCostBudgets
+
+sprite $ServiceCostBudgetsXs [10x10/16z] LSR70SD030F1kKIm_uPjXPSGrqVdzFiBNbQRxL0ro4iufXUZesvgcYAGh6h-
+
+sprite $ServiceCostBudgetsSm [12x12/16z] NKo50S0m20lE_nSlPLudYdr5o3t07D7NZEG_W6CI24LVCxZwcerptIPRizRuTJmDQ0h0UvUbprTTrMGF
+
+sprite $ServiceCostBudgetsMd [16x16/16z] {
+RKx70KDH27esTF-9WwGddnFDSgvHzURcnwYdJTAh_3XvJYfM5qixNlC0GvljFwHQmSqCWEshiDkEFuqv3yYGRks0hNRgQUrJtdmjjn28HynGXgHfLyxUDaWA
+6CANtG
+}
+
+sprite $ServiceCostBudgetsLg [20x20/16z] {
+VOy75WGn248n4VJ-9zurZ-s5cRHlnnzjCjuPoTK9M8iyMsGr7ouRLlKzrHnQ1nOUIYaFV2JLQ3ntJsJEJQaLOKUIm-mrZ8Svrcq8o03ikM7c46YBZaNfp99A
+imIwwyeq2lS2whIUIjXjr5zcYouNoa5MTN5lLISUYbILJ2u
+}
+
+!procedure ServiceCostBudgets($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceCostBudgets', $name, $tech)
+!endprocedure
+
+!procedure ServiceCostBudgetsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceCostBudgetsLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceCostBudgetsGroup($id, $name='Service Cost Budgets', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceCostBudgetsLg>', $name, $tech)
+!endprocedure

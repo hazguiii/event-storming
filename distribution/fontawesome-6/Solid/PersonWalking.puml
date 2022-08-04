@@ -1,0 +1,13 @@
+' definition of the Item fontawesome-6/Solid/PersonWalking
+
+sprite $PersonWalkingXs [6x10/16z] BOg30G0n5CLoHf7zfwq_dsYLQ1LarQQ2XzwyhwTmE7A_xOZR0Ba2
+
+sprite $PersonWalkingSm [7x12/16z] 9Ka50S1046Bket_RHqvGQCuL7Z9qxOBfleGFDIesqO8RjH3iAbSUDkjDeHz_scC
+
+sprite $PersonWalkingMd [9x16/16z] JOo30S0m54IlZNdxJnlhVHCTcJ0XtKua9ZywAlXlz3ijuwGd_qmSB2bx1aT2yNrZFuuwybDCmDYRzeyaKm08H0K
+
+sprite $PersonWalkingLg [12x20/16z] POw50GCW30GVTsx_QIkataFY8cCiFMdmCWRif-uXwO_KHtL7Sno2fHgIDeIZPmbYU6R5gWf4oz80L4mFW0od2lErOuTnT2XQ9yk40oSD2qDMXsNHhMwgAajN
+
+!procedure PersonWalking($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'fontawesome-6/Solid/PersonWalking', $name, $tech)
+!endprocedure

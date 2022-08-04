@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/AzureStack/ServicePlans
+
+sprite $ServicePlansXs [10x10/16z] Oq03N0WM5uB5XQQA1GZ035Pc842JP4Kt4m
+
+sprite $ServicePlansSm [12x12/16z] LOi50W0W20Fj-lz_LHhE8BQbG8Rl-Fxu_cW_Fzm30_gQsYTZFsnVVD_GKoRq78P-CJiz
+
+sprite $ServicePlansMd [16x16/16z] PSc10S0G4C300B3_lW10MZZFbpKjjqpBnTi-niVZmT4FNpgC44BAPij8L7iKIjV4CDzSj-ImkEO1BSPS3ZCQvhAFEqK6
+
+sprite $ServicePlansLg [20x20/16z] VSr15iGG403H0k3-zvr90W3rh3wwsMTpJZJJf5mK6slOMPGRYsArzBAPIDjvC_GLio1IpHJebC1l_XPJpqcrTqwtUSaihMPQ2vsIX6ochQdMkjgGWJy
+
+!procedure ServicePlans($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/AzureStack/ServicePlans', $name, $tech)
+!endprocedure
+
+!procedure ServicePlansCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServicePlansLg>', 'AzureStack', $funcName, $content)
+!endprocedure
+
+!procedure ServicePlansGroup($id, $name='Service Plans', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServicePlansLg>', $name, $tech)
+!endprocedure

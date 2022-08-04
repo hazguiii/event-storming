@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/ManagementGovernance/ServiceResourceGraphExplorer
+
+sprite $ServiceResourceGraphExplorerXs [10x10/16z] NSQ50G0X34FHVmAa-m-C-wiaBEuXyo4WkKmI9hAtXgEvQWWqogWiOrH8
+
+sprite $ServiceResourceGraphExplorerSm [12x12/16z] NSV50K01281GRDr_uT_vJi2R2BjCeofybLL5TzWgkXiqX9K5h8BRVxAKKw_qrSbXLiOz3Wi
+
+sprite $ServiceResourceGraphExplorerMd [16x16/16z] ZSY50GGn20NHYG0__HTyj-xseWCFt0qiVCw8SFhB1khH7Ik3FeCKRec1ckXLO_Lra4fXmwAJrjRWljjWxTndPiECpXy
+
+sprite $ServiceResourceGraphExplorerLg [20x20/16z] {
+XSg55GGn24NHZqF_3MyIMBSx4ti7_AUc1C2SSEMnq3bKHco6NCAQv-QdcJJDJK5LQHXSwuMDp0X3pgqZtlJa2-x9zqX2hp4sF8buZzaOTv9DSKVL60-ojWJU
+8bwGCBOB
+}
+
+!procedure ServiceResourceGraphExplorer($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/ManagementGovernance/ServiceResourceGraphExplorer', $name, $tech)
+!endprocedure
+
+!procedure ServiceResourceGraphExplorerCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceResourceGraphExplorerLg>', 'ManagementGovernance', $funcName, $content)
+!endprocedure
+
+!procedure ServiceResourceGraphExplorerGroup($id, $name='Service Resource Graph Explorer', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceResourceGraphExplorerLg>', $name, $tech)
+!endprocedure

@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/DevOps/ServiceDevTestLabs
+
+sprite $ServiceDevTestLabsXs [10x10/16z] LSQ54S0m54Cn5_t-UVzvov3eIEhO_dBLjqK2l2p0EVwbpadhcgoZJadg2XVj
+
+sprite $ServiceDevTestLabsSm [12x12/16z] NSU55G0m20FHL0EF_VUjwrNuuCkJz9jhoHnLSWT8BQUKw-YMb6JRh1jKhQOAUjMA4Qt6pY2zW08
+
+sprite $ServiceDevTestLabsMd [16x16/16z] ROu54W0X54Bj6Ev_tqLsR9_v6_F4vvpzD5Dkf6w6_EDxRkSmLL64JBwssp56VMYBqmQIyjYWacQtrv38HWbWpzWLHP1aEgvWSsI8wesmYxuF
+
+sprite $ServiceDevTestLabsLg [20x20/16z] {
+VSs50GCn241H8bZPVzz2YTRU-Ry8_D6HiDs9qvMciYVoX92G3tlUXdlKmNUNn1WabDc4FB44_D88Q4vMvMmTocnccWt0emQAva-fy894vEEC2BrCXSmz20wU
+Wk9ENIt9cbjbWmat_te2
+}
+
+!procedure ServiceDevTestLabs($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/DevOps/ServiceDevTestLabs', $name, $tech)
+!endprocedure
+
+!procedure ServiceDevTestLabsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceDevTestLabsLg>', 'DevOps', $funcName, $content)
+!endprocedure
+
+!procedure ServiceDevTestLabsGroup($id, $name='Service Dev Test Labs', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceDevTestLabsLg>', $name, $tech)
+!endprocedure

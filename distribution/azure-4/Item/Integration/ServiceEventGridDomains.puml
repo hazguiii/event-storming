@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/Integration/ServiceEventGridDomains
+
+sprite $ServiceEventGridDomainsXs [10x10/16z] Oq00DXXWO8E9G4WMX1fE2CNCo01bG6bM68tGYp0F
+
+sprite $ServiceEventGridDomainsSm [12x12/16z] LSor0G012C30uB3_mEzwLQhmbQz_itEuAjIv19apLuee5qMLMqISVsx_lxvM
+
+sprite $ServiceEventGridDomainsMd [16x16/16z] PSw53S0m30H0uqlPV-1oOpf1m4WTLuIAO1GytYBl--Lk9U_k2uqdp6ojU197kfghbdAHUvENtHSMaJTrxbFCTtC2
+
+sprite $ServiceEventGridDomainsLg [20x20/16z] ZSy54iDG24NHYxpVwVuNN6y2yJEEmrLZRIT64qCbPlcBbRcPHcK2ZnuJRt6_rIfNH6I92O_VYX-NXgHCfme7d2u_-95eNBdtspgsnZgKiFO4
+
+!procedure ServiceEventGridDomains($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Integration/ServiceEventGridDomains', $name, $tech)
+!endprocedure
+
+!procedure ServiceEventGridDomainsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceEventGridDomainsLg>', 'Integration', $funcName, $content)
+!endprocedure
+
+!procedure ServiceEventGridDomainsGroup($id, $name='Service Event Grid Domains', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceEventGridDomainsLg>', $name, $tech)
+!endprocedure

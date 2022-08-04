@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/Integration/ServiceRelays
+
+sprite $ServiceRelaysXs [10x10/16z] Oq00DXXWO8C8G6bM487AWYjXPmSYa012WXa2s1XOMI205G
+
+sprite $ServiceRelaysSm [12x12/16z] HSE73GCW40GmK_x8_Wkdlx1aNBbajGWK1EoQsbn3MyhFFbETXS73zn0jSfcZpHS
+
+sprite $ServiceRelaysMd [16x16/16z] POw55G0W24GLk7lilx3TVeEEy0BJ3H1u4uWpUTcOTWUmkolqibdEGKcEko2o1iaue-x5wTvQg1H7ZOZMz-z3RCXl_uSC
+
+sprite $ServiceRelaysLg [20x20/16z] VO-50G0X201fs7_XJxlEFWjW1GjrF6kmcSTfp-UWWnf7YibfsLUjyxEJKP70v2or0fhnUzqCYnDtVuQdh_SfWj-x4T_oc4VlkETrCs_yFSgmu0O
+
+!procedure ServiceRelays($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Integration/ServiceRelays', $name, $tech)
+!endprocedure
+
+!procedure ServiceRelaysCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceRelaysLg>', 'Integration', $funcName, $content)
+!endprocedure
+
+!procedure ServiceRelaysGroup($id, $name='Service Relays', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceRelaysLg>', $name, $tech)
+!endprocedure

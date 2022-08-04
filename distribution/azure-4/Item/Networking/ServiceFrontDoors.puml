@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Networking/ServiceFrontDoors
+
+sprite $ServiceFrontDoorsXs [10x10/16z] LSQ50G0W2011ElPVs0vUWOEIcLrCchkBU5S7YAXxzBgixymSwjkkUbq4Anch0G
+
+sprite $ServiceFrontDoorsSm [12x12/16z] NSO90i0m14JHmTZkV-7gtkOb-5X8HCYTEzsJcRdFPEv8JuVK0CdQlIqzzjxFjs6HEft4YLJS3BiD
+
+sprite $ServiceFrontDoorsMd [16x16/16z] RSo50SD034DHcTtz5wuLfXzyH_XCF4DEUhAuald6cZpdHIarzgYISJ5JdxZ2cmdePgU3V_OmVcmr_o0tAu38qlNymD5GJz62Qxl-
+
+sprite $ServiceFrontDoorsLg [20x20/16z] {
+VSm70iCm24DHXIBXtl_2BP2zVgQV1zvo-dGKgjgJbhQbhYMYCu_CbUycHUVkYp4sowLvP0E1j5fW79NQbFynhZPuO_XMYzK0l1Y1-iREy6-YWcPf37smAyts
+q3RXR8QNVW
+}
+
+!procedure ServiceFrontDoors($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Networking/ServiceFrontDoors', $name, $tech)
+!endprocedure
+
+!procedure ServiceFrontDoorsCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceFrontDoorsLg>', 'Networking', $funcName, $content)
+!endprocedure
+
+!procedure ServiceFrontDoorsGroup($id, $name='Service Front Doors', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceFrontDoorsLg>', $name, $tech)
+!endprocedure

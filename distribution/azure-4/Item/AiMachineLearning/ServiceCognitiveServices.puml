@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/AiMachineLearning/ServiceCognitiveServices
+
+sprite $ServiceCognitiveServicesXs [10x10/16z] TSV70O0m5CDGfqhPVs0wt7Y_EZ-0yZxmta5DKUC9wSPPppoz96kkKyjd1m
+
+sprite $ServiceCognitiveServicesSm [12x12/16z] VOZ50S0020Fno_uBr-rLYDlF-O1VCG1YZqMGm1PXoytGvfBQfAaKKgBIWFPzEZMIRCyNpP81chJlhG
+
+sprite $ServiceCognitiveServicesMd [16x16/16z] ZOZN0KGX3CCCEDZiFp3zsjSzKH89pqWvVPiM-QsXdw2gUIVRhXGUbxPpnq3o8i6MkPAhGylaA7POD5tMvEpmX0vQNY2sJxPNWAsnJJmVyOy1
+
+sprite $ServiceCognitiveServicesLg [20x20/16z] {
+hSi7ZWKX30HH0qsxkF-5LrWJbJRzcY4zoV61-lGSRnfPjLjQ7fRzCgVow93zLdgM7tCxxM_g6Cx3qiUkQ5Gz0b1zmw2PWCkc9oGeBMW1iZims6wmGLJ1pf3S
+DWxZCaN4Mikhqjv6xBhkIdxO5m
+}
+
+!procedure ServiceCognitiveServices($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/AiMachineLearning/ServiceCognitiveServices', $name, $tech)
+!endprocedure
+
+!procedure ServiceCognitiveServicesCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceCognitiveServicesLg>', 'AiMachineLearning', $funcName, $content)
+!endprocedure
+
+!procedure ServiceCognitiveServicesGroup($id, $name='Service Cognitive Services', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceCognitiveServicesLg>', $name, $tech)
+!endprocedure

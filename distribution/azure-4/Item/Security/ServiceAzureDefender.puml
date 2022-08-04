@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Security/ServiceAzureDefender
+
+sprite $ServiceAzureDefenderXs [10x10/16z] FSQ70S0W3CH0VTb_vOGki7sCL5QExGfgunbDo6Wfw6cCO2D0CokJ5uET-04
+
+sprite $ServiceAzureDefenderSm [12x12/16z] FSVH5G9G38DG6hh_p9hNe_SBgEnmnkGkVqDqiDhdUXHUZoYZ0jgxNaqtlAdbsOBVoDS7
+
+sprite $ServiceAzureDefenderMd [16x16/16z] HOm55W0W34Af-vzPzp2-CLQWECB7bcGsIQpYPEUJKMLoR_hRDnT_NaMyN928dtlappE2jcgCnauG7HX86mFZ4XIbuCAc-2IkM
+
+sprite $ServiceAzureDefenderLg [20x20/16z] {
+PSpN0SKm24DHLFPV-HLPJhrVoJ4m3RBc5YsIEXMHP25aHPgYplTW8zTS3cbL2-9bkVcmhEDY6FxQ9n5JVaArVLf2RmGxbNcVHkIwn1YiXepTCTJeJPWBhkOQ
+dfHaJli2
+}
+
+!procedure ServiceAzureDefender($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Security/ServiceAzureDefender', $name, $tech)
+!endprocedure
+
+!procedure ServiceAzureDefenderCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceAzureDefenderLg>', 'Security', $funcName, $content)
+!endprocedure
+
+!procedure ServiceAzureDefenderGroup($id, $name='Service Azure Defender', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceAzureDefenderLg>', $name, $tech)
+!endprocedure

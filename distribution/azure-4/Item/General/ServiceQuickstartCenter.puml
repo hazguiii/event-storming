@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/General/ServiceQuickstartCenter
+
+sprite $ServiceQuickstartCenterXs [10x10/16z] PSQr0G0W402nGrxttnVlI1K-cHozQzmW7Qf8NokmqzONwVuYAyAY8iYTmia4
+
+sprite $ServiceQuickstartCenterSm [12x12/16z] ROot0SGW40I1c-5VwhzVF9asMf--mFiUbl7zRneIJYAG4Z4jXL8Oxg81vu7_fJge-L3HPLSbNLv7l6a7
+
+sprite $ServiceQuickstartCenterMd [16x16/16z] VSc53G0n4CJ0pSLxWVxxVIRHMpYo_cfpVbJ7dEqLCEQ7fj9lGgY2jegteAWG6-CW61_xOeMDHmMolvHzq3VT3buEkzluTgRj29lRwP3kNJ8tIHUr0W
+
+sprite $ServiceQuickstartCenterLg [20x20/16z] {
+PSx50KH120DG966a_u9tZFsMuqFb6tq3IcylQhrtFiGHm-wpYf5uZ3e8EEBM1b1awfvn4YCcOi1gCyvCd7ql0dacaUGOUVnGwgOCa-mYSbFuZUeY4hbj6WcE
+P1-2CxETkIzYegu_vR9OUoxIoCqkcHy
+}
+
+!procedure ServiceQuickstartCenter($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceQuickstartCenter', $name, $tech)
+!endprocedure
+
+!procedure ServiceQuickstartCenterCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceQuickstartCenterLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceQuickstartCenterGroup($id, $name='Service Quickstart Center', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceQuickstartCenterLg>', $name, $tech)
+!endprocedure

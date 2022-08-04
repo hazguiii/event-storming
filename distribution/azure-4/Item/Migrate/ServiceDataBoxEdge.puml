@@ -1,0 +1,21 @@
+' definition of the Item azure-4/Item/Migrate/ServiceDataBoxEdge
+
+sprite $ServiceDataBoxEdgeXs [10x10/16z] TSQ35G0m40Mmmo_sNxWsyXJwi4c9otfAeV25gagj2BKH4cQcHGG
+
+sprite $ServiceDataBoxEdgeSm [12x12/16z] VSQt0SCm30J0HmRs7vYPZItfgiCNSvTJZy7cQ7IQZGlG8JTMG6DVX23dK56DcWGO9_pf
+
+sprite $ServiceDataBoxEdgeMd [16x16/16z] ZSd50GD134DHsVv3_HUSB3Ezaq0VkMk3t4bhBODvI6MYdfT5z3sJoaA2W59dXgHWwOGmhTqFlmW1RLGbesS3lVi3
+
+sprite $ServiceDataBoxEdgeLg [20x20/16z] hSkr0GH134DHsVf3_HTy39xiO5yeq062tfjLkT-LACT3UsVZfOwUgAFjtO5Uqv31qERR238KmIYXiQo4ac69q9ObAUsx9h2uM4zD2kxYJdV9bRvt1W
+
+!procedure ServiceDataBoxEdge($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Migrate/ServiceDataBoxEdge', $name, $tech)
+!endprocedure
+
+!procedure ServiceDataBoxEdgeCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceDataBoxEdgeLg>', 'Migrate', $funcName, $content)
+!endprocedure
+
+!procedure ServiceDataBoxEdgeGroup($id, $name='Service Data Box Edge', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceDataBoxEdgeLg>', $name, $tech)
+!endprocedure

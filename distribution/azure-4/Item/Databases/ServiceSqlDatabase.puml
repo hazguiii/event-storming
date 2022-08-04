@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/Databases/ServiceSqlDatabase
+
+sprite $ServiceSqlDatabaseXs [10x10/16z] Oq02Z2mWm0XcSN9oCe9Ot5mWm8t6OkDYPeAn69bWifnewZZ1B6O6
+
+sprite $ServiceSqlDatabaseSm [12x12/16z] VOl50OC040JFjVzw4znXNgjmWb0664UDh1wkH8Dk8qJao55tJTmq5XNoaYDkshoatBw-a9DqW3y
+
+sprite $ServiceSqlDatabaseMd [16x16/16z] TO-30G0n34NxKUy_xzbuPPo43m1A8dR96req15ETA0PdMJq9CovzbNlR-96hQlEqTncjXOPfxNPKDkT3jWlYP4-NV9NF_7zoEEMwJLGMAStZZ
+
+sprite $ServiceSqlDatabaseLg [20x20/16z] {
+bSx50KKX44DHaZ48_TVxvBlBtSr1sxi8S0_WHSpF0KS3jY7st0rsiDgmZxq440VJJCSXHfzdcxhqjoLSGLVPrI2bAQnukw-OgdPh4jBak3KY5Q2A7FVlOlp_
+ltvdrWwD6plG8OkgNXayJ2i
+}
+
+!procedure ServiceSqlDatabase($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/Databases/ServiceSqlDatabase', $name, $tech)
+!endprocedure
+
+!procedure ServiceSqlDatabaseCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceSqlDatabaseLg>', 'Databases', $funcName, $content)
+!endprocedure
+
+!procedure ServiceSqlDatabaseGroup($id, $name='Service Sql Database', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceSqlDatabaseLg>', $name, $tech)
+!endprocedure

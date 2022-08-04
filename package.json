@@ -1,0 +1,76 @@
+{
+  "name": "@tmorin/plantuml-libs",
+  "version": "7.1.0",
+  "description": "A set of resources for [PlantUML](https://plantuml.com) to define diagrams for AWS, Azure, EIP ...",
+  "license": "MIT",
+  "homepage": "https://github.com/tmorin/plantuml-libs#readme",
+  "bugs": {
+    "url": "https://github.com/tmorin/plantuml-libs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmorin/plantuml-libs.git"
+  },
+  "author": {
+    "name": "Thibault Morin",
+    "url": "https://tmorin.github.io"
+  },
+  "bin": {
+    "gdiag": "bin/gdiag.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "plantuml",
+    "library",
+    "diagram",
+    "sprite",
+    "icon",
+    "aws",
+    "azure",
+    "c4model",
+    "eip",
+    "eventstorming",
+    "fontawesome",
+    "gcp",
+    "material",
+    "simpleicons"
+  ],
+  "scripts": {
+    "alpha": "standard-version --skip.changelog --skip.tag --prerelease alpha",
+    "alpha:publish": "git push --all && npm publish --tag canary",
+    "generate:library": "scripts/generate-library.sh",
+    "generate:package": "scripts/generate-package.sh",
+    "generate:workdir": "ts-node workdir-generator",
+    "release": "standard-version",
+    "release:publish": "git push --tags && git push --all",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "@types/extract-zip": "^2.0.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/glob": "^7.2.0",
+    "@types/lodash": "^4.14.176",
+    "@types/node": "^16.11.11",
+    "@types/node-fetch": "^2.5.12",
+    "@types/yaml": "^1.9.7",
+    "@types/yargs": "^17.0.5",
+    "csv-parse": "^5.0.4",
+    "extract-zip": "^2.0.1",
+    "fs-extra": "^10.0.0",
+    "lodash": "^4.17.21",
+    "mocha": "^9.2.0",
+    "prettier": "^2.6.1",
+    "standard-version": "^9.3.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4",
+    "yaml": "^1.10.2"
+  },
+  "dependencies": {
+    "glob": "^7.2.0",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.6",
+    "yargs": "^17.2.1"
+  }
+}

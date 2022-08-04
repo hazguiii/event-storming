@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/General/ServiceBranch
+
+sprite $ServiceBranchXs [10x10/16z] DSR10G0G54EnN_1g_u41SafiDPxMsezk0S4gPtdzJCe4jcMS8bQKTtRBpcdVcG
+
+sprite $ServiceBranchSm [12x12/16z] FSVR5O0m3CFG64wiTF-1eMzzNSKiusQlMNGUMbu3M41EWfB4Ndub25SLgjuJVLBgyqQiMUpHMkjSrU8F
+
+sprite $ServiceBranchMd [16x16/16z] LOk74S0m20E1cBR_mf4vfVXTNu0GbuC8FtM2JozZmAhfrv70D86FVfu1fQkx8OZ7NLKXahKnhOh0AnBGcSTx2TZnRgOo62M92Ig3xeP-rACt
+
+sprite $ServiceBranchLg [20x20/16z] {
+POe72WGn4CFYJBt_V_Wy0RDDD26q16AzGMPy4_acdLS2ufnNKWkb6jYAf9BQ45TYsrKsngJ6w1kqpAi5YCse2D3CQRPMzO6jUtmlGcypmEpOEj0An7Jf1Fow
+XYQkIzHlyD6BPj9rdTVr1m
+}
+
+!procedure ServiceBranch($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceBranch', $name, $tech)
+!endprocedure
+
+!procedure ServiceBranchCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceBranchLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceBranchGroup($id, $name='Service Branch', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceBranchLg>', $name, $tech)
+!endprocedure

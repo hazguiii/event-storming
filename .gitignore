@@ -1,0 +1,8 @@
+.idea/
+.cache/
+.tmp/
+.workdir/
+test/*.png
+library.yaml
+node_modules
+*.tgz

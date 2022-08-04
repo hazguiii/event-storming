@@ -1,0 +1,24 @@
+' definition of the Item azure-4/Item/General/ServiceBug
+
+sprite $ServiceBugXs [10x10/16z] LSX50G1140F1NXYAVx_7M9y0FuMkvcxiHko0v6pQ-mxGrGJKZa5O7GP-dA0L
+
+sprite $ServiceBugSm [12x12/16z] NScr0SH040Gm-M2X_uAVqOe6dAn3U1aHdxmpSpzIvLFGuX59PDqDPCOZww6zikJeXq8V7jcCzuDr1G
+
+sprite $ServiceBugMd [16x16/16z] RStL0GCm203HI_3z1wuGwhs_5m7-9GuKhrpadSjlwSlc4M4wyenJAM2rROmM1FWOV74hyhHfbO-rvBmVztjzjt1BQyhTaZt4pZwYlVf_TtiHT5S
+
+sprite $ServiceBugLg [20x20/16z] {
+TSxLOGLH24NHFHUd_u8pHfwlJ_JmMx6JVAbfmTQyIlSGNfZlJ5zA5ZktnP2CKNFUBOPa2cZ2etPzLmVF0To98iSyyNxKeWpGbfVTQD3uVizh008xgngfi8is
+hK7rdPafRO_CKnHspL1tu_O7
+}
+
+!procedure ServiceBug($id, $name="", $tech="")
+  IconElement($id, 'IconElement', 'azure-4/Item/General/ServiceBug', $name, $tech)
+!endprocedure
+
+!procedure ServiceBugCard($id, $funcName="", $content="")
+  IconCardElement($id, 'IconCardElement', '<$ServiceBugLg>', 'General', $funcName, $content)
+!endprocedure
+
+!procedure ServiceBugGroup($id, $name='Service Bug', $tech='')
+  IconGroupElement($id, 'IconGroupElement', '<$ServiceBugLg>', $name, $tech)
+!endprocedure
